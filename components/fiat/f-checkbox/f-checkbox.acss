@@ -1,0 +1,154 @@
+.f-checkbox-btn {
+  opacity: 0;
+  position: absolute;
+  margin-right: 10px;
+}
+
+.f-checkbox {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: fit-content;
+}
+
+.f-checkbox-text {
+  flex: 1;
+  font-size: 12px;
+  color: #A4A4A4;
+  line-height: 20px;
+}
+
+.f-checkbox::before,
+.f-checkbox-24.f-checkbox::before {
+  content: '';
+  position: relative;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background-color: white;
+  border: 1px solid #A4A4A4;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.f-checkbox::after,
+.f-checkbox-24.f-checkbox::after {
+  content: '';
+  position: absolute;
+  right: initial;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-65%) rotate(40deg);
+  border: 2px solid #fff;
+  border-width: 0 2px 2px 0;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+}
+
+/* handles custom checkbox sizes */
+.f-checkbox-22.f-checkbox::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.f-checkbox-22.f-checkbox::after {
+  width: 5px;
+  height: 9px;
+}
+
+.f-checkbox-26.f-checkbox::before {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;  box-sizing: border-box;
+}
+
+.f-checkbox-26.f-checkbox::after {
+  width: 7px;
+  height: 11px;  box-sizing: border-box;
+}
+
+/* disabled checkbox */
+.f-checkbox.f-checkbox-disabled {
+  color: #BFBFBF !important;
+}
+
+.f-checkbox-disabled.f-checkbox::before {
+  border-color: #BFBFBF !important;
+}
+
+/* reversed checkbox */
+.f-checkbox.f-checkbox-reversed::before {
+  margin-right: 0 !important;
+}
+
+.f-checkbox.f-checkbox-reversed {
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.f-checkbox.f-checkbox-reversed::after {
+  left: initial;
+  right: 6px;
+}
+
+/* centered checkbox */
+.f-checkbox.f-checkbox-centered {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* readonly checkbox */
+.f-checkbox.f-checkbox-readonly {
+  pointer-events: none;
+}
+
+/* indeterminate checkbox */
+.f-checkbox-indeterminate.f-checkbox {
+  pointer-events: none;
+}
+
+.f-checkbox-indeterminate.f-checkbox::before,
+.f-checkbox-indeterminate.f-checkbox-blue.f-checkbox::before {
+  background: #108EE9 !important;
+  border-color: #108EE9 !important;
+}
+
+.f-checkbox-indeterminate.f-checkbox-yellow.f-checkbox::before {
+  background: #FB8B01 !important;
+  border-color: #FB8B01 !important;
+}
+
+.f-checkbox-indeterminate.f-checkbox::after {
+  top: 50%;
+  transform: translateY(-65%) rotate(90deg);
+  border: 2px solid #fff;
+  border-width: 0 2px 0 0;
+  opacity: 1;
+}
+
+/* handles checked checkbox */
+.checked.f-checkbox::before,
+.checked.f-checkbox-blue.f-checkbox::before {
+  background: #108EE9;
+  border-color: #108EE9;
+}
+
+.checked.f-checkbox-yellow.f-checkbox::before {
+  background: #FB8B01;
+  border-color: #FB8B01;
+}
+
+.checked.f-checkbox-disabled.f-checkbox::before {
+  background: #BFBFBF;
+  border-color: #BFBFBF;
+}
+
+.checked.f-checkbox::after {
+  opacity: 1;
+}

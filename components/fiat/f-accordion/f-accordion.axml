@@ -1,0 +1,5 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="f-accordion {{className}} f-accordion-container">
+  <slot></slot>
+</view>

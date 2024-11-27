@@ -1,0 +1,13 @@
+.f-collapse {
+  opacity: 0;
+  max-height: 0;
+
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.shown.f-collapse {
+  opacity: 1;
+  max-height: 100vh;
+  
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}

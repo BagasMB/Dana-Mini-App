@@ -1,0 +1,48 @@
+.f-switch-btn {
+  opacity: 0;
+  position: absolute;
+  cursor: default;
+}
+
+.f-switch {
+  background: #BFBFBF;
+  width: 50px;
+  height: 30px;
+  border-radius: 100px;
+  position: relative;
+
+  transition: background-color 0.2s;
+}
+
+.f-switch::after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  right: initial;
+  left: 2px;
+
+  transition: 0.3s;
+}
+
+/* checked switch */
+.checked.f-switch {
+  background: #108EE9;
+}
+
+.checked.f-switch::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%)
+}
+
+/* handles disabled switch */
+.f-switch.f-switch-disabled {
+  background: #E3E3E3;
+}
+
+.checked.f-switch.f-switch-disabled {
+  background: #7AC2F6;
+}

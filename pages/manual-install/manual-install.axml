@@ -1,0 +1,80 @@
+<view class="container">
+  <!-- Tab Navigation -->
+  <view class="tabs">
+    <view 
+      a:for="{{tabs}}" 
+      a:key="tab" 
+      onTap="changeTab" 
+      data-tab="{{index}}" 
+      class="tab {{activeTab === index ? 'active' : ''}}">
+      {{item}}
+    </view>
+  </view>
+
+  <!-- Header Image -->
+  <view class="header">
+    <view class="coin">
+      <image class="logo" src="/assets/icons/dana-coin.svg" />  
+    </view>
+    <text class="title">{{activeTab === 0 ? 'IOS' : activeTab === 1 ? 'Android' : 'Pixel'}} Manual Install</text>
+  </view>
+
+  <!-- Dynamic Content -->
+  <view class="content">
+
+    <block a:if="{{activeTab === 0}}">
+      <view class="paragraph">
+        <text>Mini program studio needs authorization for the following information:</text>  
+      </view>
+
+      <view class="steps">
+        <view a:for="{{iosSteps}}" a:key="index" class="step">{{index + 1}}. {{item}}</view>
+      </view>
+
+      <view class="paragraph-second">
+        <text>Enter the SM-DP+ Address and the Activation Code. To find these details follow the below steps:</text>
+      </view>
+
+      <view class="steps">
+        <view a:for="{{iosStepsSecond}}" a:key="index" class="step">{{index + 1}}. {{item}}</view>
+      </view>
+    </block>
+
+    <block a:if="{{activeTab === 1}}">
+      <view class="paragraph">
+        <text>Mini program studio needs authorization for the following information:</text>
+      </view>
+      
+      <view class="steps">
+        <view a:for="{{androidSteps}}" a:key="index" class="step">{{index + 1}}. {{item}}</view>
+      </view>
+
+      <view class="paragraph-second">
+        <text>Enter the SM-DP+ Address and the Activation Code. To find these details follow the below steps:</text>
+      </view>
+
+      <view class="steps">
+        <view a:for="{{androidStepsSecond}}" a:key="index" class="step">{{index + 1}}. {{item}}</view>
+      </view>
+    </block>
+
+    <block a:if="{{activeTab === 2}}">
+
+      <view class="paragraph">
+        <text>Mini program studio needs authorization for the following information:</text>
+      </view>
+      
+      <view class="steps">
+        <view a:for="{{pixelSteps}}" a:key="index" class="step">{{index + 1}}. {{item}}</view>
+      </view>
+
+      <view class="paragraph-second">
+        <text>Enter the SM-DP+ Address and the Activation Code. To find these details follow the below steps:</text>
+      </view>
+
+      <view class="steps">
+        <view a:for="{{pixelStepsSecond}}" a:key="index" class="step">{{index + 1}}. {{item}}</view>
+      </view>
+    </block>
+  </view>
+</view>

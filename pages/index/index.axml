@@ -1,0 +1,92 @@
+<!--<import-sjs name="element" from="/utils/element.sjs"/> -->
+
+<view class="header">
+  <image src="../../assets/images/knowroaming.png" class="logo-knowroaming" />
+</view>
+<view class="search">
+  <f-input placeholder="Where are you traveling to?" class="no-label" onInput="onSearchInput">
+    <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
+    <image src="/assets/icons/filter.svg" slot="iconOutterRight" style="cursor: pointer;" onTap="handleTapIconOutterRight" />
+  </f-input>
+</view>
+
+<view class="menu">
+  <text class="text-stay">
+    Stay Connected on Every Journey with a Travel eSIM
+  </text>
+  <view class="icons">
+    <view class="icon-item">
+      <image src="/assets/icons/home.svg" class="icon-svg" />
+      <view>
+        <text>Store</text>
+      </view>
+    </view>
+    <view class="icon-item">
+      <image src="/assets/icons/e-sim-2.svg" class="icon-svg" />
+      <view>
+        <text>My eSIM</text>
+      </view>
+    </view>
+    <view class="icon-item" onTap="handleTapIconOutterRight">
+      <image src="/assets/icons/comment.svg" class="icon-svg" />
+      <view>
+        <text>Support</text>
+      </view>
+    </view>
+    <view class="icon-item" onTap="abouteSIM">
+      <image src="/assets/icons/info.svg" class="icon-svg" />
+      <view>
+        <text>About eSIM</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view>
+  <block a:for="{{groupedCountries}}" a:key="letter">
+    <view class="divider">{{item.letter}}</view>
+
+    <block a:for="{{item.countries}}" a:key="name">
+      <view
+        class="country-row"
+        data-country="{{item.name}}"
+        data-icon="{{item.icon}}"
+        data-type="{{item.type}}"
+        onTap="onCountries"
+      >
+        <image src="{{item.icon}}" class="country-icon" />
+        <text class="country-name">{{item.name}}</text>
+        <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
+      </view>
+    </block>
+  </block>
+</view>
+
+
+<!--<provider-list providers="{{ providersSearchResult }}" isSearch="{{ isSearch }}" /> -->
+
+<view class="button">
+  <btn-gradien onTap="allCountries">View All Countries and Regions</btn-gradien>
+</view>
+
+<view class="help-box">
+  <view>
+    <text class="help-box-title">
+      Need Help?
+    </text>
+  </view>
+  <text class="help-box-text">
+    Contact 24/7 Customer Service on
+    <text class="help-box-text2">
+      WhatsaApp
+      <text class="link"> +13322371910</text> or email
+      <text class="link"> support@KnowRoaming.com</text>
+    </text>
+  </text>
+  <view class="contact-info">
+    <image src="/assets/icons/heandset.svg" alt="Customer Service Icon" class="contact-icon" />
+    <text class="contact-info-text">
+      24/7 Customer Service
+    </text>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!-- Header -->
+<view class="header">
+  <text class="title">Austria 5GB eSIM</text>
+</view>
+
+<view class="container">
+  <view class="qr-card">
+    <image class="qr-code" src="/assets/images/qr.png" mode="aspectFill" />
+  </view>
+
+  <!-- Details -->
+  <view class="details">
+    <view class="garis"></view>
+    <view class="toggle" onTap="toggleExpand">
+      <text class="label">Transaction Detail</text>
+      <image
+        class="icon"
+        src="{{isExpanded ? '/assets/icons/chev-up.svg' : '/assets/icons/chev-down.svg'}}"
+        mode="widthFix"
+      />
+    </view>
+    <view a:if="{{isExpanded}}" class="detail-content">
+      <view class="detail-row">
+        <text class="key">ICCID</text>
+        <text class="value">89103000000004493528</text>
+      </view>
+      <view class="detail-row">
+        <text class="key">Date</text>
+        <text class="value">28 Oct 2024</text>
+      </view>
+    </view>
+    <btn-gradien onTap="openManualInstall">Manual Install</btn-gradien>
+
+  </view>
+
+
+</view>

@@ -1,0 +1,8 @@
+@import "./styles/fonts.acss";
+@import "./styles/fiat-commons.acss";
+
+page {
+  background: #ffffff;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}

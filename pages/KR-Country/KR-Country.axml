@@ -1,0 +1,200 @@
+<view class="pl-16 pr-16 pb-16">
+  <cell-country
+    class="mt-8 mb-12"
+    countryName="{{ countryName }}"
+    countryIcon={{ countryIcon }}
+    onReset="onReset"
+  />
+
+  <view class="pakets">
+    <block a:for="{{pakets}}" a:key="id">
+      <view
+        class="paket {{item.selected ? 'selected' : ''}}"
+        onTap="selectPaket"
+        data-id="{{item.id}}"
+      >
+        <image class="paket-icon" src="/assets/icons/e-sim.svg" />
+        <view class="info">
+          <text class="data">{{item.data}}</text>
+          <view class="detail">
+            <text class="duration">{{item.duration}}</text>
+            <text a:if="{{countryType === 'Regions'}}" class="country">
+              {{item.country}} Countries
+            </text>
+          </view>
+        </view>
+        <view class="price">
+          <text>{{item.price}}</text>
+          <image class="dana-icon" src="/assets/icons/dana.svg" />
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <btn-gradien class="buy-button mb-16" onTap="openBuyESIM" disabled="{{!buyEnabled}}">
+    BUY eSIM
+  </btn-gradien>
+
+  <f-checkbox class="c-label">
+    I have read and accepted the Terms and Conditions and Privacy Policy. I also acknowledge that in order for the eSIM to work, my device needs to be eSIM compatible and not locked to any specific network.
+  </f-checkbox>
+
+  <view class="footer">
+    <view class="top-section">
+      <text class="top-text">
+        Tha data packages are
+        <view>
+          available for devices that
+        </view>
+        <view>
+          support eSIM.
+        </view>
+      </text>
+      <f-btn type="secondary" size="small">
+        Compatible Devices
+      </f-btn>
+    </view>
+
+    <view class="bottom-section">
+      <view class="feature-item">
+        <image src="/assets/icons/statistics.svg" class="icon" />
+        <text>Easy Top-Up</text>
+      </view>
+      <view class="feature-item">
+        <image src="/assets/icons/speedometer.svg" class="icon" />
+        <text>No Speed Throttling</text>
+      </view>
+      <view class="feature-item">
+        <image src="/assets/icons/hotspot.svg" class="icon" />
+        <text>Mobile Hotspot</text>
+      </view>
+    </view>
+
+    <view class="new-esim">
+      <view class="card">
+        <image class="card-image" src="/assets/images/Illustration.png" />
+        <view class="card-content">
+          <text class="card-title">New to eSIMs?</text>
+          <text class="card-description">
+            Find out what they are and how
+            <view>
+              they work.
+            </view>
+          </text>
+        </view>
+        <image src="/assets/icons/chev-right.svg" class="card-arrow" />
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- Modal/ Pop Up Payment -->
+<f-sheet ref="saveBuyESIM" dismissable={{ false }} roundedTop>
+  <f-card>
+    <view class="dash" />
+    <f-card-content class="mb-10">
+      <view class="pop-up_header">
+        <image src="/assets/images/DANA Protection.png" class="img-protec" />
+        <view class="spacer"></view>
+        <image src="/assets/images/Pay.png" class="img-pay" />
+      </view>
+
+      <view class="pay-confirm">
+        <view class="pay-confirm_header">
+          <view class="back">
+            <image class="back-icon" src="/assets/icons/back.svg" onTap="closeBuyESIM" />
+          </view>
+          <text class="title-payment">Payment Confirmation</text>
+        </view>
+        <view class="item">
+          <view class="img-circle">
+            <image class="item-img" src="/assets/icons/mart.svg" />
+          </view>
+          <view class="details">
+            <text class="item-title">Austria 5GB eSIM</text>
+            <text class="item-desc">7 Days</text>
+          </view>
+        </view>
+      </view>
+
+      <f-cell class="p-16">
+        <f-cell-content>Total Price</f-cell-content>
+        <f-cell-action>
+          <text class="f-title title-27 text-yellow-50">Rp15.50</text>
+        </f-cell-action>
+      </f-cell>
+      <!-- Blank page -->
+      <view class="blank"></view>
+      <view class="balances">
+        <view class="balance">
+          <image class="balance-icon" src="/assets/icons/dana.svg" />
+          <view class="balance-left">
+            <text class="balance-dana">Balance Dana</text>
+            <text class="balance-price">Rp15.50</text>
+          </view>
+          <view class="balance-right">
+            <f-select class="mb-16 pilih" data="{{select}}" />
+          </view>
+        </view>
+      </view>
+    </f-card-content>
+    <f-card-actions class="mb-20 mx-16">
+      <f-btn onTap="successBuyESIM" type="primary">
+        PAY Rp15.50
+      </f-btn>
+    </f-card-actions>
+  </f-card>
+</f-sheet>
+
+<f-sheet ref="saveSuccessBuyESIM" dismissable={{ false }} roundedTop>
+  <f-card>
+    <view class="dash" />
+    <f-card-content class="mb-10">
+      <view class="pop-up_header">
+        <image src="/assets/images/DANA Protection.png" class="img-protec" />
+        <view class="spacer"></view>
+        <image src="/assets/images/Pay.png" class="img-pay" />
+      </view>
+
+      <view class="pay-success">
+        <view class="pay-confirm_header">
+          <view class="back">
+            <image class="back-icon" src="/assets/icons/back.svg" onTap="closeSuccessBuyESIM" />
+          </view>
+          <text class="title-payment">Payment Success</text>
+        </view>
+        <view class="trans-success">
+          <image class="icon-coin" src="/assets/images/coin.svg" />
+          <view class="trans-details">
+            <text>Transaction Detail!</text>
+          </view>
+          <view class="trans-desc">
+            <text>Rp58.000</text>
+          </view>
+          <!--<f-btn type="secondary" uppercase="{{true}}">Shere</f-btn> -->
+          <button class="btn-shere" bindtap="onShareClick">
+            <image src="/assets/icons/share.svg" class="icon-shere" />
+            Shere
+          </button>
+        </view>
+      </view>
+      <view class="info-padding">
+        <text>Let's check the status in Transaction Detail!</text>
+      </view>
+    </f-card-content>
+    <f-card-actions class="my-20 mx-16">
+      <f-btn
+        onTap="closeSuccessBuyESIM"
+        type="secondary"
+        uppercase="{{true}}"
+        class="mr-8"
+      >
+        Close
+      </f-btn>
+      <f-btn type="primary" uppercase="{{true}}" onTap="openHistoryESIM">
+        Cek Status
+      </f-btn>
+    </f-card-actions>
+  </f-card>
+</f-sheet>

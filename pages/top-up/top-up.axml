@@ -1,0 +1,70 @@
+<view class="menu">
+  <text class="text-stay">
+    Top Up eSIM
+  </text>
+</view>
+
+<view class="content">
+  <!-- Filtered Countries -->
+  
+  <block a:for="{{groupedCountries}}" a:key="letter">
+    <block a:for="{{item.countries}}" a:key="name">
+      <view class="country-row" onTap="toggleDropdown" data-name="{{item.name}}">
+        <image src="{{item.icon}}" class="country-icon" />
+        <text class="country-name">{{item.name}}</text>
+        <image src="/assets/icons/chev-down.svg" class="arrow-icon" />
+      </view>
+  
+      <!-- Dropdown content -->
+      <block a:if="{{activeCountry === item.name}}">
+        <view class="plans">
+          <block a:for="{{plans}}" a:key="id">
+            <view class="divider">
+              <view class="plan">
+                <view class="plan-icon">
+                  <image class="img" src="/assets/icons/e-sim.svg" />
+                </view>
+                <view class="info">
+                  <text class="data">{{item.data}}</text>
+                  <text class="duration">{{item.duration}}</text>
+                </view>
+                <view class="price">
+                  <text>{{item.price}}</text>
+                  <image class="dana-icon" src="/assets/icons/dana.svg" />
+                </view>
+              </view>
+              <btn-gradien onTap="onTap">{{item.topup}}</btn-gradien>
+            </view>
+          </block>
+        </view>
+      </block>
+    </block>
+  </block>
+</view>
+
+
+<view class="footer">
+  <view class="top-section">
+    <view class="top-text">
+      <text class="line">The data packages are</text>
+      <text class="line">available for devices that</text>
+      <text class="line">support eSIM</text>
+    </view>
+    <f-btn type="secondary" size="small">Compatible Devices</f-btn>
+  </view>
+
+  <view class="bottom-section">
+    <view class="feature-item">
+      <image src="/assets/icons/statistics.svg" class="icon" />
+      <text>Easy Top-Up</text>
+    </view>
+    <view class="feature-item">
+      <image src="/assets/icons/speedometer.svg" class="icon" />
+      <text>No Speed Throttling</text>
+    </view>
+    <view class="feature-item">
+      <image src="/assets/icons/hotspot.svg" class="icon" />
+      <text>Mobile Hotspot</text>
+    </view>
+  </view>
+</view>

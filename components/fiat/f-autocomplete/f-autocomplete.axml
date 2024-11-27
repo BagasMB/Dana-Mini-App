@@ -1,0 +1,41 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-autocomplete', className) }}">
+  <view class="f-autocomplete__icon-outer-left">
+    <slot name="iconOuterLeft" />
+  </view>
+  <view class="{{autocompleteTypeClass}}">
+    <label class="f-autocomplete__label">{{label}}</label>
+    <view class="f-autocomplete__container">
+      <view class="f-autocomplete__wrapper">
+        <view class="f-autocomplete__icon-inner-left">
+          <slot name="iconInnerLeft" />
+        </view>
+        <input value="{{autocompleteValue}}" type="{{type}}" placeholder="{{placeholder}}" onFocus="onInputFocus" onBlur="onInputBlur" onInput="onInput" class="{{autocompleteCssClass}}" disabled="{{loading || disabled}}"/>
+        <view class="f-autocomplete__icon-inner-right">
+          <slot name="iconInnerRight" />
+        </view>
+        <view a:if="{{showClearIcon}}" class="f-autocomplete__clear-button" onTap="onClearIconTap">
+          <image src="/components/fiat/assets/close.svg"/>
+        </view>
+        <image a:if="{{loading}}" class="f-autocomplete__loader" src="/components/fiat/assets/spin.svg"/>
+        <image a:if="{{!loading && !showClearIcon}}" class="f-autocomplete__arrow" src="/components/fiat/assets/down.svg"/>
+      </view>
+      <view class="f-autocomplete__option-list" a:if="{{isShow}}" onTap="setOption">
+        <text class="f-autocomplete__option" a:for="{{currentOption}}" a:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}
+        </text>
+      </view>
+      <view class="f-autocomplete__option-list" a:if="{{showNoData}}">
+        <text class="f-autocomplete__option">{{emptyPlaceholder}}
+        </text>
+      </view>
+      <view a:if="{{helperMsg || isError}}">
+        <text a:if="{{!isError}}" class="f-autocomplete__helper-default">{{helperMsg}}</text>
+        <text a:if="{{isError}}" class="f-autocomplete__helper-error">{{errorMsg}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="f-autocomplete__icon-outer-right">
+    <slot name="iconOuterRight" />
+  </view>
+</view>

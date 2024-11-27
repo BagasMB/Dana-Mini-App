@@ -1,0 +1,21 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-stepper', className) }}">
+  <view
+    class="f-stepper__button"
+    onTap="substract"
+    >
+    <f-icon name='min' w='32' h='32'></f-icon>
+  </view>
+   <view
+      class="f-stepper__value f-body body-16 f-text-center mx-8"
+    >
+      {{ qty }}
+  </view>
+    <view
+      class="f-stepper__button"
+      onTap="add"
+    >
+    <f-icon name='plus' w='32' h='32'></f-icon>
+  </view>
+</view>

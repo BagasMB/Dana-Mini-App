@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "f-btn": "/components/fiat/f-btn/f-btn",
+    "btn-gradien": "/components/btn-gradien/btn-gradien"
+  }
+}

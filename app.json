@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/all-countries/all-countries",
+    "pages/KR-Country/KR-Country",
+    "pages/E-SIM-info/E-SIM-info",
+    "pages/history/history",
+    "pages/activate-eSIM/activate-eSIM",
+    "pages/top-up/top-up",
+    "pages/manual-install/manual-install"
+  ],
+  "window": {
+    "defaultTitle": "KnowRoaming X Dana"
+  }
+}

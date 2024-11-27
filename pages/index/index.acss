@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('https://fonts.cdnfonts.com/s/16293/SFProText-Regular.woff') format('woff');
+}
+
+.header {
+  background-color: #383838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.logo-knowroaming {
+  width: 122px;
+  height: 36px;
+}
+
+.search {
+  padding: 16px;
+  background-color: #4C4C4C;
+}
+
+.menu {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.text-stay {
+  font-size: 22px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.icon-item {
+  text-align: center;
+  color: #00a9b8;
+}
+
+.icon-item view text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+.icon-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.arrow-icon {
+  width: 23px;
+  height: 23px;
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+.divider {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 5px 0px 0px 20px;
+  margin: 5px 0;  
+  border-radius: 5px; 
+}
+
+.country-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.country-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.country-name {
+  font-size: 16px;
+  color: #333;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.help-box {
+  font-family: 'SF Pro Text', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px 5px 20px 20px;
+  background-color: #ffffff;
+  width: 355px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.help-box-title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #626262;
+  font-weight: bold;
+}
+
+.help-box-text {
+  font-size: 12px;
+  margin: 5px 0;
+  color: #666666;
+}
+
+.help-box-text2 {
+  font-size: 12px;
+  margin: 0 2px;
+  color: #666666;
+}
+
+.link {
+  font-weight: bold;
+  color: #626262;
+  text-decoration: underline;
+  cursor: pointer; /* Indicates clickable text */
+  margin: 0 2px; /* Small margin to prevent links from sticking to surrounding text */
+}
+
+.help-box a {
+  color: #007bff;
+  text-decoration: underline; /* Underline links */
+}
+
+.help-box a:hover {
+  text-decoration: underline; /* Keep underline on hover */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+}
+
+.contact-info-text {
+  font-size: 12px;
+  color: #666666;
+}

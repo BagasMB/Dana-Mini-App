@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "f-accordion-item": "/components/fiat/f-accordion-item/f-accordion-item"
+  }
+}

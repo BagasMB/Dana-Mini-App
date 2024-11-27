@@ -1,0 +1,12 @@
+<import-sjs name="element" from="/utils/element.sjs"/>
+
+<view class="{{ element.classAttr('provider-select', className) }}">
+  <view class='provider-select__title f-caption caption-12 secondary'>{{ title }}</view>
+  <view class='provider-select__body'>
+    <f-icon name='dana-coin' w='28' h='28'/>
+    <view class='provider-select__name f-body-16'>{{ providerName }}</view>
+    <f-btn type='secondary' size='small' class='provider-select__btn' onTap='onReset'>
+      CHANGE
+    </f-btn>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view>
+  <label class="{{element.classAttr(defaultClasses, className)}}">
+    <switch
+    class="f-switch-btn"
+    checked="{{checked}}"
+    disabled="{{disabled}}"
+    onChange="toggleSwitch"/>
+  </label>
+</view>

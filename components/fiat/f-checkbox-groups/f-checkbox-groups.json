@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "f-checkbox": "/components/fiat/f-checkbox/f-checkbox"
+  }
+}

@@ -1,0 +1,30 @@
+.f-accordion-item{
+  margin-top: 10px;
+}
+
+
+.f-accordion-item .arrow-right {
+  transition: all .2s ease-out;
+  transform: rotate(-90deg)  
+}
+
+.f-accordion-item .arrow-down {
+  transition: all .2s ease-out;
+  transform: rotate(0);
+}
+
+.f-accordion-item .f-collapse {
+  overflow-y: hidden;
+  box-sizing: border-box;
+  will-change: max-height;
+  -webkit-transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out;
+}
+/* 
+.f-accordion-item .title--active .f-collapse {
+  overflow-y: hidden;
+  box-sizing: border-box;
+  will-change: max-height;
+  -webkit-transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out;
+} */

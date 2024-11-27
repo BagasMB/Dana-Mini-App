@@ -1,0 +1,19 @@
+<view>
+  <checkbox-group>
+    <slot>
+      <f-checkbox
+      a:for="{{value}}"
+      name="{{item.name}}"
+      value="{{item.value}}"
+      label="{{item.label}}"
+      color="{{item.color}}"
+      size="{{item.size}}"
+      disabled="{{item.disabled}}"
+      readonly="{{item.readonly}}"
+      checked="{{item.checked}}"
+      centered="{{item.centered}}"
+      isIndeterminate="{{item.isIndeterminate}}"
+    />
+    </slot>
+  </checkbox-group>
+</view>

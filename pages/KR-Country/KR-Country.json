@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "cell-country": "/components/cell-country/cell-country",
+    "f-checkbox": "/components/fiat/f-checkbox/f-checkbox",
+    "f-btn": "/components/fiat/f-btn/f-btn",
+
+    "btn-gradien": "/components/btn-gradien/btn-gradien",
+
+    "f-card": "/components/fiat/f-card/f-card",
+    "f-card-content": "/components/fiat/f-card-content/f-card-content",
+    "f-card-actions": "/components/fiat/f-card-actions/f-card-actions",
+    "f-sheet": "/components/fiat/f-sheet/f-sheet",
+
+    "f-select": "/components/fiat/f-select/f-select",
+
+    "f-cell": "/components/fiat/f-cell/f-cell",
+    "f-cell-action": "/components/fiat/f-cell-action/f-cell-action",
+    "f-cell-content": "/components/fiat/f-cell-content/f-cell-content"
+  }
+}

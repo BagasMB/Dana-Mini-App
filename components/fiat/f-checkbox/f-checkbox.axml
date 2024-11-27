@@ -1,0 +1,16 @@
+<import-sjs name="element" from="../../../utils/element.sjs" />
+
+<view>
+  <label class="{{element.classAttr(defaultClasses, className)}}">
+    <checkbox
+      class="f-checkbox-btn"
+      disabled="{{disabled}}"
+      checked="{{checked}}"
+      value="{{value}}"
+      onChange="toggleChecked"
+    />
+    <view class="f-checkbox-text">
+      <slot>{{label}}</slot>
+    </view>
+  </label>
+</view>

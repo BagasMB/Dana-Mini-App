@@ -1,0 +1,18 @@
+<view>
+  <radio-group onChange="handleChange">
+    <slot>
+      <f-radio
+        a:for="{{value}}"
+        value="{{item.value}}"
+        label="{{item.label}}"
+        color="{{item.color}}"
+        size="{{item.size}}"
+        disabled="{{item.disabled}}"
+        readonly="{{item.readonly}}"
+        checked="{{item.checked}}"
+        centered="{{item.centered}}"
+        activeValue="{{radioValue}}">
+      </f-radio>
+    </slot>
+  </radio-group>
+</view>

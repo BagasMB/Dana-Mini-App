@@ -1,0 +1,14 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view>
+  <label class="{{element.classAttr(defaultClasses, className)}}">
+    <radio
+      class="f-radio-btn"
+      value="{{value}}"
+      checked="{{checked}}"
+      disabled="{{disabled}}"
+      onChange="toggleChecked"
+    />
+    <slot>{{label}}</slot>
+  </label>
+</view>

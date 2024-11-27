@@ -1,0 +1,15 @@
+<import-sjs name="element" from="/utils/element.sjs" />
+
+<view class="{{ element.classAttr('provider-select', className) }}">
+  <!--<view class='provider-select__title f-caption caption-12 secondary'>{{ title }}</view> -->
+  <view class='provider-select__body'>
+    <image src="{{ countryIcon }}" class="country-icon" />
+    <view class='provider-select__name f-body-16'>
+      <text class="countryName">{{ countryName }}</text>
+      <view class="travel">Travel eSIMs</view>
+    </view>
+    <f-btn type='secondary' size='small' uppercase="{{true}}" class='provider-select__btn' onTap='onReset'>
+      CHANGE Country
+    </f-btn>
+  </view>
+</view>

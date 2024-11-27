@@ -1,0 +1,20 @@
+.provider-select__body {
+  display: flex;
+  align-items: center;
+  padding: 14px 0px 14px;
+}
+
+.provider-select__body .f-icon {
+  flex-shrink: 0;
+}
+
+.provider-select__name {
+  flex-shrink: 0;
+  flex-grow: 1;
+  margin: 0px 12px 0px;
+}
+
+.provider-select__btn {
+  flex-shrink: 1;
+  width: initial;
+}

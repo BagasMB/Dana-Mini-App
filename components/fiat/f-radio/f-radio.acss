@@ -1,0 +1,137 @@
+.f-radio-btn {
+  opacity: 0;
+  position: absolute;
+}
+
+.f-radio {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: fit-content;
+}
+
+.f-radio::before,
+.f-radio-24.f-radio::before {
+  content: '';
+  position: relative;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background-color: white;
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+
+  transition: background-color 0.2s;
+}
+
+.f-radio::after,
+.f-radio-24.f-radio::after {
+  content: '';
+  position: absolute;
+  right: initial;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-radius: 50%;
+  opacity: 0;
+
+  transition: opacity 0.2s;
+}
+
+/* handles custom radio sizes */
+.f-radio-22.f-radio::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.f-radio-22.f-radio::after {
+  width: 8px;
+  height: 8px;
+}
+
+.f-radio-26.f-radio::before {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+}
+
+.f-radio-26.f-radio::after {
+  width: 12px;
+  height: 12px;
+}
+
+/* disabled radio */
+.f-radio-disabled {
+  color: #BFBFBF !important;
+}
+
+.f-radio-disabled.f-radio::before {
+  border-color: #BFBFBF !important;
+}
+
+/* reversed radio */
+.f-radio.f-radio-reversed::before {
+  margin-right: 0 !important;
+}
+
+.f-radio-reversed {
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.f-radio.f-radio-reversed::after {
+  left: initial;
+  right: 4px;
+}
+
+/* centered radio */
+.f-radio-centered {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* readonly radio */
+.f-radio-readonly {
+  pointer-events: none;
+}
+
+/* handles checked radio */
+.checked.f-radio::before,
+.checked.f-radio-blue.f-radio::before {
+  background: #fff;
+  border-color:  #108EE9;
+}
+
+.checked.f-radio::after,
+.checked.f-radio-blue.f-radio:after {
+  background: #108EE9;
+  border-color: #108EE9;
+}
+
+.checked.f-radio-yellow.f-radio::before {
+  background: #fff;
+  border-color:  #FB8B01;
+}
+
+.checked.f-radio-yellow.f-radio:after {
+  background: #FB8B01;
+  border-color: #FB8B01;
+}
+
+.checked.f-radio-disabled.f-radio::before {
+  background: #fff;
+  border-color: #BFBFBF;
+}
+
+.checked.f-radio-disabled.f-radio:after {
+  background: #BFBFBF !important;
+  border-color: #BFBFBF !important;
+}
+
+.checked.f-radio::after {
+  opacity: 1;
+}

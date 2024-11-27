@@ -1,0 +1,26 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view>
+  <view class="{{ element.classAttr(`f-tab f-tab--${className} f-tab--${type}`) }}">
+    <view 
+      a:for="{{tabs}}"
+      class="{{ element.classAttr(`tab-wrapper mr-8 isActive__${activeIndex==index}`)}}"
+      onTap="onTap"
+      current="{{activeIndex == index}}"
+      data-index="{{index}}"
+    >
+      {{item.value}}
+       <f-notif a:if="{{item.notif}}" amount="{{item.notif}}" type="{{notifType}}" class="f-tab__notif" />
+    </view>
+  </view>
+
+  <swiper circular="false" current="{{activeIndex}}" class="f-tab__content f-tab__content__{{type}}" onChange="onChangeSwipper">
+    <block a:for="{{tabs}}">
+      <swiper-item>
+        <view>
+          {{item.content}}
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

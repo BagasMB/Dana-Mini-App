@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="search">
+    <f-input placeholder="Where are you traveling to?" class="no-label" onInput="onSearchInput">
+      <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
+      <image src="/assets/icons/filter.svg" slot="iconOutterRight" style="cursor: pointer;" onTap="handleTapIconOutterRight" />
+    </f-input>
+  </view>
+
+  <view class="menu">
+    <text class="text-stay">
+      Seamless Connectivity in 200+ Destinations
+    </text>
+    <view class="icons">
+      <view class="icon-item">
+        <image src="/assets/icons/home.svg" class="icon-svg" />
+        <view>
+          <text>Store</text>
+        </view>
+      </view>
+      <view class="icon-item">
+        <image src="/assets/icons/e-sim-2.svg" class="icon-svg" />
+        <view>
+          <text>My eSIM</text>
+        </view>
+      </view>
+      <view class="icon-item" onTap="handleTapIconOutterRight">
+        <image src="/assets/icons/comment.svg" class="icon-svg" />
+        <view>
+          <text>Support</text>
+        </view>
+      </view>
+      <view class="icon-item" onTap="abouteSIM">
+        <image src="/assets/icons/info.svg" class="icon-svg" />
+        <view>
+          <text>About eSIM</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Tabs -->
+  <view class="tabs">
+    <view
+      a:for="{{tabs}}"
+      a:key="tab"
+      onTap="changeTab"
+      data-tab="{{index}}"
+      class="tab {{activeTab === index ? 'active' : ''}}"
+    >
+      {{item}}
+    </view>
+  </view>
+
+  <!-- Filtered Countries -->
+  <block a:for="{{filteredCountries}}" a:key="letter">
+    <view class="divider">{{item.letter}}</view>
+
+    <block a:for="{{item.countries}}" a:key="name">
+      <view
+        class="country-row"
+        data-country="{{item.name}}"
+        data-icon="{{item.icon}}"
+        data-type="{{item.type}}"
+        onTap="onCountries"
+      >
+        <image src="{{item.icon}}" class="country-icon" />
+        <text class="country-name">{{item.name}}</text>
+        <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
+      </view>
+    </block>
+  </block>
+</view>

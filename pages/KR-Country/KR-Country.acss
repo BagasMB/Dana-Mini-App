@@ -1,0 +1,399 @@
+/* Start Icon Header */
+.country-icon {
+  width: 42px;
+  height: 42px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* End Icon Header */
+
+/* Start List Paket Data */
+.pakets {
+  margin-bottom: 20px;
+}
+
+.paket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.paket-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  font-size: 16px;
+}
+
+.detail {
+  display: flex;
+  align-content: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.duration {
+  font-size: 14px;
+  align-self: start;
+  color: #888;
+
+}
+
+.country {
+  font-size: 14px;
+  color: #108EE9;
+  /* Warna biru sesuai contoh */
+}
+
+.price {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dana-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  fill: currentColor;
+}
+
+.paket .dana-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.selected {
+  background-color: #EEEEEE;
+  width: 100vw;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 0;
+}
+
+/* End List Paket Data */
+
+
+/* Start Footer */
+.footer {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px 0px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-text {
+  font-size: 13px;
+  color: #626262;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.feature-item text {
+  font-size: 10px;
+  color: #313131;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+/* End Footer */
+
+/* Start Card New E-SIM */
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.card-image {
+  width: 88px;
+  height: 80px;
+  margin-right: 17px;
+  margin-left: 0;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: #E5E5E5;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.card-description {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.card-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #cccccc;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+/* END Card New E-SIM */
+
+/* Start Pop Up Pay Confirmation */
+.pop-up_header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.img-protec {
+  width: 96px;
+  height: 20px;
+}
+
+.spacer {
+  flex-direction: 1;
+  /* Isi ruang kosong untuk pusatkan img-pay */
+}
+
+.img-pay {
+  margin-left: 68px;
+  width: 50px;
+  height: 24px;
+}
+
+/* Payment Confirmation Section */
+.pay-confirm {
+  background: linear-gradient(to bottom, #007bff, #00aaff);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.pay-success {
+  background: linear-gradient(to bottom, #007bff, #00aaff);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 442px;
+}
+
+.pay-confrim_header {
+  margin-bottom: 40px;
+}
+
+.back {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.title-payment {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.img-circle {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.item-img {
+  height: 36px;
+  width: 36px;
+}
+
+.details {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.item-desc {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-top: 4px;
+}
+
+/* Tampilan Kosong  */
+.blank {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+/* Balance */
+.balances {
+  box-shadow: 0 -5px 4px #00000029;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 0px 16px;
+}
+
+.balance-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.balance-left {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-dana {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.balance-price {
+  font-size: 18px;
+}
+
+/* End Pop Up Pay Confirmation */
+
+/* Tambhan Pop Up Success */
+.info-padding {
+  padding-top: 16px;
+  text-align: center;
+  color: #727272;
+}
+
+.icon-coin {
+  width: 113px;
+  height: 72px;
+  margin: 35px 0;
+}
+
+.trans-details {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.trans-desc {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+.btn-shere {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.icon-shere {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,96 @@
+.f-textarea {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.f-textarea .f-textarea__wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+}
+
+.f-textarea .f-textarea__label {
+  font-family: OpenSans, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 4px;
+}
+
+.f-textarea .f-textarea--outlined .f-input__wrapper {
+  border: none;
+  border: solid 1.2px #e3e3e3;
+  border-radius: 4px;
+  padding: 2.5px 0 0 0;
+  transition: border .1s linear;
+}
+
+.f-textarea .disabled .f-input__wrapper {
+  border: none;
+}
+
+.f-textarea .disabled .f-textarea__label{
+    color: #bfbfbf!important;
+}
+
+.f-textarea .disabled .f-input__wrapper textarea{
+    background-color: #e3e3e3;
+    pointer-events: none;
+}
+
+.f-input__helper-default{
+  font-family:-apple-system,system-ui,BlinkMacSystemFont,Roboto,sans-serif;
+  font-weight:400;
+  font-size:12px;
+  line-height:1.34;
+  display:flex;
+  justify-content:space-between;
+  margin-top:2px;
+  color:#727272
+}
+.f-input__helper-error{
+  font-family:-apple-system,system-ui,BlinkMacSystemFont,Roboto,sans-serif;
+  font-weight:400;
+  font-size:12px;
+  line-height:1.34;
+  display:flex;
+  justify-content:space-between;
+  margin-top:2px;
+  color:#ff5d55
+}
+
+.f-textarea .error .f-input__wrapper {
+  border: solid 1px #ff5d55;
+}
+
+.f-textarea .f-textarea--focus .f-input__wrapper {
+ border: solid 1px #fb8b01;
+  outline: none;
+  box-shadow: none;
+}
+
+  
+.f-input__icon-outter-left view,
+.f-input__icon-outter-left image {
+  max-height: 28px;
+  max-width: 28px;
+  min-height: 28px;
+  min-width: 28px;
+  margin: 28px 8px 0px 0px;
+}
+  
+.f-input__icon-outter-right view,
+.f-input__icon-outter-right image {
+  max-height: 28px;
+  max-width: 28px;
+  min-height: 28px;
+  min-width: 28px;
+  margin: 28px 0px 0px 8px;
+}
+
+/* readonly checkbox */
+.f-textarea .f-textarea-readonly {
+  pointer-events: none;
+}

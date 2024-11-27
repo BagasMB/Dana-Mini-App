@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "f-icon": "/components/fiat/f-icon/f-icon",
+    "f-divider": "/components/fiat/f-divider/f-divider"
+  }
+}

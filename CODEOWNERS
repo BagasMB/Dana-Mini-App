@@ -1,0 +1,14 @@
+@@@AppPerformance @"M. Ridwan Fansuri" @"I Made Junestraliawan Murti"
+@@@Architecture @"I Made Junestraliawan Murti"
+@@@MiniProgram @"M. Ridwan Fansuri" @"Paulina" @"Nadine Azhalia"
+
+
+**/components/** @@MiniProgram
+**/data/** @@MiniProgram
+**/pages/** @@MiniProgram
+**/styles/** @@MiniProgram
+**/utils/** @@MiniProgram
+
+/app.acss @@MiniProgram
+/app.json @@MiniProgram
+/mini.project.json @@MiniProgram

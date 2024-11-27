@@ -1,0 +1,80 @@
+.btn-gradien {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  user-select: none;
+  touch-action: manipulation;
+  background: linear-gradient(90deg, #B529AC, #30A7BF);
+  color: #FFF;
+  cursor: pointer;
+}
+
+.btn-gradien-primary {
+  color: #FFF;
+  background: linear-gradient(90deg, #B529AC, #30A7BF);
+}
+
+.btn-gradien-primary[disabled] {
+  color: #FFF;
+  background: linear-gradient(90deg, #bfbfbf, #e3e3e3);
+  cursor: not-allowed;
+}
+
+.btn-gradien-secondary {
+  color: #108ee9;
+  background: linear-gradient(90deg, #ffffff, #f0f0f0);
+  border: solid 0.01rem #108ee9;
+}
+
+.btn-gradien-secondary[disabled] {
+  color: #bfbfbf;
+  border-color: #e3e3e3;
+}
+
+.btn-gradien-large {
+  width: 100%;
+  height: 44px;
+  padding-right: 12px;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: OpenSans, sans-serif;
+  line-height: 44px;
+}
+
+.btn-gradien-small {
+  font-weight: 600;
+  font-size: 12px;
+  font-family: OpenSans, sans-serif;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.btn-gradien-uppercase {
+  text-transform: uppercase;
+}
+
+.btn-gradien-ghost {
+  color: #108ee9;
+  background: transparent;
+}
+
+.btn-gradien-ghost:disabled {
+  color: #bfbfbf;
+  position: relative;
+}
+
+.btn-gradien-ghost:disabled:after {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  content: '';
+}

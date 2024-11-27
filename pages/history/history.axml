@@ -1,0 +1,113 @@
+<view class="header">
+  <text class="text-title">
+    My eSIMs
+  </text>
+</view>
+
+<view class="divider">Most Recent</view>
+
+<view class="content">
+  <view class="plans">
+    <block a:for="{{recent}}" a:key="data">
+      <view class="plan">
+        <view class="plan-icon">
+          <image class="img" src="{{item.icon}}" />
+        </view>
+        <view class="info">
+          <text class="data">{{item.data}}</text>
+          <text class="duration">{{item.duration}}</text>
+        </view>
+        <view class="price">
+          <text>{{item.price}}</text>
+          <image class="dana-icon" src="/assets/icons/dana.svg" />
+        </view>
+      </view>
+
+      <!-- Informasi tambahan sesuai gambar -->
+      <view class="menu">
+        <text class="text-stay">
+          Status
+        </text>
+        <view class="status">
+          <text class="badge">{{item.status}}</text>
+        </view>
+      </view>
+
+      <view class="extra-info">
+  
+        <view class="info">
+          <text class="title">ICCID</text>
+          <text class="title">Data Remaining</text>
+          <text class="title">Date</text>
+          <text class="title">Invoice</text>
+        </view>
+        <view>
+          <text class="data-title">{{item.iccid}}</text>
+          <text class="data-title">{{item.dataRemaining}}</text>
+          <text class="data-title">{{item.date}}</text>
+          <text class="data-title-invoice">Download</text>
+        </view>
+      </view>
+
+      <view class="button">
+        <btn-gradien onTap="openActivateeSIM">Activate eSIM</btn-gradien>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="divider">September 2025</view>
+
+<view class="content">
+  <view class="plans">
+    <block a:for="{{plans}}" a:key="data">
+      <view class="plan">
+        <view class="plan-icon">
+          <image class="img" src="{{item.icon}}" />
+        </view>
+        <view class="info">
+          <text class="data">{{item.data}}</text>
+          <text class="duration">{{item.duration}}</text>
+        </view>
+        <view class="price">
+          <text>{{item.price}}</text>
+          <image class="dana-icon" src="/components/assets/dana.svg" />
+        </view>
+      </view>
+
+      <!-- Informasi tambahan sesuai gambar -->
+      <view class="menu">
+        <text class="text-stay">
+          Status
+        </text>
+        <view class="status">
+          <text class="badge">{{item.status}}</text>
+        </view>
+      </view>
+
+      
+
+      <view class="extra-info">
+  
+        <view class="info">
+          <text class="title">ICCID</text>
+          <text class="title">Data Remaining</text>
+          <text class="title">Date</text>
+          <text class="title">Invoice</text>
+        </view>
+        <view>
+          <text class="data-title">{{item.iccid}}</text>
+          <text class="data-title">{{item.dataRemaining}}</text>
+          <text class="data-title">{{item.date}}</text>
+          <text class="data-title-invoice">Download</text>
+        </view>
+      </view>
+
+      <view class="button">
+        <f-btn type="primary" class="btn mr-8" onTap="openTopUp">Top Up eSIM</f-btn>
+        <f-btn type="primary" class="btn mb-20">Package Details</f-btn>
+      </view>
+    </block>
+  </view>
+</view>

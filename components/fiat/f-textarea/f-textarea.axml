@@ -1,0 +1,41 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-textarea', className) }}"> 
+  <view class="f-input__icon-outter-left">
+    <slot name="iconOutterLeft" />
+  </view>
+  <view class="f-textarea__wrapper f-textarea--outlined {{inputTypeClass}}">
+     <view class="f-textarea__label">
+        {{ label }}
+      </view>
+      <view class="f-input__container">
+        <view class="f-input__wrapper">
+          <textarea
+            placeholder="{{placeholder}}"
+            value="{{inputValue}}"
+            class="{{inputCssClass}}"
+            maxlength="{{maxlength}}"
+            onFocus="onInputFocus"
+            onBlur="onInputBlur"
+            onInput="onInput"
+            auto-height="{{autoHeight}}"
+            disabled="{{disabled}}"
+            show-count="{{showCount}}"
+            readonly="{{readonly}}"
+          >
+          </textarea>
+          <image
+            a:if="{{showLoader}}"
+            class="f-input__loader"
+            src="/components/fiat/assets/spin.svg"/>
+        </view>
+        <view a:if="{{helperMsg || errorMsg}}">
+        <text a:if="{{!errorMsg}}" class="f-input__helper-default">{{helperMsg}}</text>
+        <text class="f-input__helper-error">{{errorMsg}}</text>
+      </view>
+      </view>
+  </view>
+ <view class="f-input__icon-outter-right">
+    <slot name="iconOutterRight" />
+  </view>
+</view>

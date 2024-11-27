@@ -1,0 +1,36 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-select', className) }}">
+  <view class="f-select__icon-outer-left">
+    <slot name="iconOuterLeft" />
+  </view>
+  <view class="{{selectTypeClass}}">
+    <label class="f-select__label">{{label}}</label>
+    <view class="f-select__container">
+      <view class="f-select__wrapper" onTouchEnd="onTouchEnd" onTouchStart="onTouchStart">
+        <view class="f-select__icon-inner-left">
+          <slot name="iconInnerLeft" />
+        </view>
+        <view class="{{selectCssClass}}" id="f-select__value">
+        {{selectValue == '' ? data[0].name : selectValue}}
+        </view>
+        <view class="f-select__icon-inner-right">
+          <slot name="iconInnerRight" />
+        </view>
+        <image a:if="{{loading}}" class="f-select__loader" src="/components/fiat/assets/spin.svg"/>
+        <image a:if="{{!loading}}" class="f-select__arrow" src="/components/fiat/assets/down.svg"/>
+      </view>
+      <view class="f-select__option-list" a:if="{{isShow}}" onTap="setOption">
+        <text class="f-select__option" a:for="{{data}}" a:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}
+        </text>
+      </view>
+      <view a:if="{{helperMsg || isError}}">
+        <text a:if="{{!isError}}" class="f-select__helper-default">{{helperMsg}}</text>
+        <text a:if="{{isError}}" class="f-select__helper-error">{{errorMsg}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="f-select__icon-outer-right">
+    <slot name="iconOuterRight" />
+  </view>
+</view>

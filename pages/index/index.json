@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "f-input": "/components/fiat/f-input/f-input",
+    "provider-list": "/components/provider-list/provider-list",
+    "f-checkbox": "/components/fiat/f-checkbox/f-checkbox",
+    "btn-gradien": "/components/btn-gradien/btn-gradien"
+  }
+}

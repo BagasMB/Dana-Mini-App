@@ -1,0 +1,24 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="px-12 f-accordion-item {{className}} {{isActive ? activeClass : ''}} {{disabled ? 'f-accordion-item__disabled' : ''}}">
+  <view
+    class="accordion-header py-16 
+      f-flex f-justify-space-between 
+      {{titleClass}} {{isActive ? 'title--active' : ''}}"
+      onTap="onCollapseTap"
+      data-key="{{id}}"
+      data-title="{{title}}"
+      data-isActive="{{isActive}}"
+  >
+    <view class="f-body body-14 pb-8">
+      <text>{{header}}</text>
+    </view>
+    <f-icon name='down' w='22' h='22' class="{{isActive ? 'arrow-right' : 'arrow-down'}}"/>    
+  </view>
+  <view class="f-collapse f-collapse-{{contentId}} {{contentClass}}" style="max-height: {{contentHeight}}">
+    <view class="f-body body-14 pb-8">
+      {{panel}}
+    </view>
+  </view>
+  <f-divider/>
+</view>
