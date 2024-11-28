@@ -18,14 +18,6 @@ Page({
           { name: "Global 3 GB", icon: "/assets/icons/global.svg", type: "Global" },
         ],
       },
-      // {
-      //   letter: "Region",
-      //   countries: [
-      //     { name: "Eropa 10 GB", icon: "/assets/icons/global.svg", type: "Regions"},
-      //     { name: "Asia 5 GB", icon: "/assets/icons/global.svg", type: "Regions" },
-      //     { name: "Amerika 3 GB", icon: "/assets/icons/global.svg", type: "Regions" },
-      //   ],
-      // },
     ],
   },
 
@@ -44,6 +36,10 @@ Page({
     } else {
       console.error("Data not found in the dataset.");
     }
+  },
+
+  openSearch() {
+    my.navigateTo({ url: '/pages/search/search'});
   },
   
   allCountries(){
@@ -65,23 +61,7 @@ Page({
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
     this.setData({ providersSearchResult: this.data.providers })
   },
-  onReady() {},
-  onShow() {
-    // Page display
-  },
-  onHide() {
-    // Page hidden
-  },
-  onUnload() {
-    // Page is closed
-  },
-  onTitleClick() {
-    // Title clicked
-  },
-  onPullDownRefresh() {},
-  onReachBottom() {
-    // Page is pulled to the bottom
-  },
+
   onShareAppMessage() {
     // Back to custom sharing information
     return {

@@ -4,10 +4,12 @@
   <image src="../../assets/images/knowroaming.png" class="logo-knowroaming" />
 </view>
 <view class="search">
-  <f-input placeholder="Where are you traveling to?" class="no-label" onInput="onSearchInput">
-    <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
-    <image src="/assets/icons/filter.svg" slot="iconOutterRight" style="cursor: pointer;" onTap="handleTapIconOutterRight" />
-  </f-input>
+  <view onTap="openSearch">
+    <f-input placeholder="Where are you traveling to?" class="no-label">
+      <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
+      <image src="/assets/icons/filter.svg" slot="iconOutterRight" style="cursor: pointer;" onTap="handleTapIconOutterRight" />
+    </f-input>
+  </view>
 </view>
 
 <view class="menu">

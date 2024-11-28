@@ -1,0 +1,41 @@
+<view class="app-container">
+
+  <view class="search">
+    <f-input placeholder="Where are you traveling to" class="no-label" onInput="handleSearch" value="{{search}}">
+      <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
+    </f-input>
+  </view>
+
+  <block a:if="{{filteredData.length > 0}}">
+    <view class="data-grid">
+      <block a:for="{{filteredData}}" a:for-item="item" a:for-index="index" a:key="index">
+        <view 
+          class="data-card"
+          data-country="{{item.name}}"
+          data-icon="{{item.icon}}"
+          data-type="{{item.type}}"
+          onTap="onCountries"
+        >
+          <image src="{{item.icon}}" class="country-icon" />
+          <text class="country-name">{{item.name}}</text>
+          <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <view a:if="{{isSearching && filteredData.length === 0}}" class="f-text-center mt-32">
+    <image 
+      class="mx-auto img-search-not-found" 
+      src="https://a.m.dana.id/resource/imgs/miniprogram/search-not-found.svg"/>
+    <view class="f-title title-18 my-8">
+      Oops, search not found.
+    </view>
+    <text>Seems like we can’t find the country you’re looking for. Please check your spelling and try again.</text>
+  </view>
+
+  <block a:if="{{!isSearching}}">
+    <view class="no-results">Masukkan setidaknya 4 huruf untuk mencari.</view>
+  </block>
+</view>
+

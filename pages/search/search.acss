@@ -1,0 +1,73 @@
+/* app-container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* search-bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* data-grid */
+.data-grid {
+  width: 100%;
+}
+
+/* data-card */
+.data-card {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+.arrow-icon {
+  width: 23px;
+  height: 23px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.country-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.search {
+  padding: 16px;
+}
+
+.search-text {
+  color: darkblue;
+  font-size: 14px; 
+}
+
+.country-name {
+  font-size: 16px;
+  color: #333;
+}
+
+.data-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* no-results */
+.no-results {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+.img-search-not-found {
+  height: 160px;
+  width: 160px;
+}

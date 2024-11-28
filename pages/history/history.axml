@@ -34,7 +34,6 @@
       </view>
 
       <view class="extra-info">
-  
         <view class="info">
           <text class="title">ICCID</text>
           <text class="title">Data Remaining</text>
@@ -60,8 +59,8 @@
 <view class="divider">September 2025</view>
 
 <view class="content">
-  <view class="plans">
-    <block a:for="{{plans}}" a:key="data">
+  <block a:for="{{plans}}" a:key="data">
+    <view class="plans">
       <view class="plan">
         <view class="plan-icon">
           <image class="img" src="{{item.icon}}" />
@@ -85,11 +84,7 @@
           <text class="badge">{{item.status}}</text>
         </view>
       </view>
-
-      
-
       <view class="extra-info">
-  
         <view class="info">
           <text class="title">ICCID</text>
           <text class="title">Data Remaining</text>
@@ -106,8 +101,35 @@
 
       <view class="button">
         <f-btn type="primary" class="btn mr-8" onTap="openTopUp">Top Up eSIM</f-btn>
-        <f-btn type="primary" class="btn mb-20">Package Details</f-btn>
+        <f-btn type="primary" class="btn">Package Details</f-btn>
       </view>
-    </block>
+    </view>
+  </block>
+</view>
+
+
+<view class="footer">
+  <view class="top-section">
+    <view class="top-text">
+      <text class="line">The data packages are</text>
+      <text class="line">available for devices that</text>
+      <text class="line">support eSIM</text>
+    </view>
+    <f-btn type="secondary" size="small">Compatible Devices</f-btn>
+  </view>
+
+  <view class="bottom-section">
+    <view class="feature-item">
+      <image src="/assets/icons/statistics.svg" class="icon" />
+      <text>Easy Top-Up</text>
+    </view>
+    <view class="feature-item">
+      <image src="/assets/icons/speedometer.svg" class="icon" />
+      <text>No Speed Throttling</text>
+    </view>
+    <view class="feature-item">
+      <image src="/assets/icons/hotspot.svg" class="icon" />
+      <text>Mobile Hotspot</text>
+    </view>
   </view>
 </view>

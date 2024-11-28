@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/all-countries/all-countries",
+    "pages/search/search",
     "pages/KR-Country/KR-Country",
     "pages/E-SIM-info/E-SIM-info",
     "pages/history/history",

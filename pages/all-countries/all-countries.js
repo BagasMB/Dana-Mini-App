@@ -9,6 +9,10 @@ Page({
           { name: "Afghanistan", icon: "/assets/countries/afghanistan.png", type: "Country" },
           { name: "Albania", icon: "/assets/countries/albania.png", type: "Country" },
           { name: "Algeria", icon: "/assets/countries/algeria.png", type: "Country" },
+          { name: "Asia", icon: "/assets/countries/asia.png", type: "Regions" }, 
+          { name: "America", icon: "/assets/countries/america.png", type: "Regions" },
+          { name: "Australia", icon: "/assets/countries/australia.png", type: "Regions" },
+          { name: "Africa", icon: "/assets/countries/africa.png", type: "Regions" },
         ],
       },
       {
@@ -62,6 +66,11 @@ Page({
     ],
     filteredCountries: [], // Untuk menyimpan data sesuai tab
   },
+
+  openSearch() {
+    my.navigateTo({ url: '/pages/search/search'});
+  },
+
   abouteSIM(){
     my.navigateTo({
       url: '../E-SIM-info/E-SIM-info',

@@ -72,7 +72,9 @@
 
     <view class="new-esim">
       <view class="card">
-        <image class="card-image" src="/assets/images/Illustration.png" />
+        <view class="card-image">
+          <image class="image-esim" src="/assets/images/eSIM.svg" />
+        </view>
         <view class="card-content">
           <text class="card-title">New to eSIMs?</text>
           <text class="card-description">
@@ -90,7 +92,7 @@
 </view>
 
 <!-- Modal/ Pop Up Payment -->
-<f-sheet ref="saveBuyESIM" dismissable={{ false }} roundedTop>
+<f-sheet ref="saveBuyESIM" roundedTop>
   <f-card>
     <view class="dash" />
     <f-card-content class="mb-10">
@@ -147,7 +149,7 @@
   </f-card>
 </f-sheet>
 
-<f-sheet ref="saveSuccessBuyESIM" dismissable={{ false }} roundedTop>
+<f-sheet ref="saveSuccessBuyESIM" roundedTop>
   <f-card>
     <view class="dash" />
     <f-card-content class="mb-10">
