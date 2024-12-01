@@ -2,38 +2,38 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0rpx;
+  left: 0rpx;
 }
 
 .f-sheet {
   background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 100%;
   position: fixed;
   z-index: 101;
-  bottom: 0px; 
+  bottom: 0rpx;
   max-height: 80vh;
   transform: translateY(80%);
   background-color: white;
 }
 
 .f-sheet--rounded-top {
-  border-radius: 12px 12px 0 0;
+  border-radius: 24rpx 24rpx 0 0;
 }
 
 .f-sheet .dash {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
 }
 
 .f-sheet .dash::after {
   content: '';
-  width: .56rem;
-  height: .04rem;
+  width: 11.2rpx;
+  height: 8rpx;
   background-color: #e3e3e3; /* @grey-20 */
-  border-radius: .07rem;
+  border-radius: 14rpx;
   display: block;
   margin: 0 auto;
 }

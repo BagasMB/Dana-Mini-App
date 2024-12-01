@@ -4,14 +4,18 @@
   flex-direction: column;
 }
 
+.not-fond{
+  padding: 0rpx 25rpx;
+}
+
 /* search-bar */
 .search-bar {
   width: 100%;
-  max-width: 400px;
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  max-width: 800rpx; /* 400px */
+  padding: 16rpx; /* 8px */
+  margin-bottom: 32rpx; /* 16px */
+  border: 2rpx solid #ccc; /* 1px */
+  border-radius: 8rpx; /* 4px */
 }
 
 /* data-grid */
@@ -23,51 +27,51 @@
 .data-card {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 0;
+  border-bottom: 2rpx solid #e0e0e0; /* 1px */
+  padding: 20rpx 0; /* 10px 0 */
 }
 
 .arrow-icon {
-  width: 23px;
-  height: 23px;
+  width: 46rpx; /* 23px */
+  height: 46rpx; /* 23px */
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 20rpx; /* 10px */
 }
 
 .country-icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 64rpx; /* 32px */
+  height: 64rpx; /* 32px */
+  margin-right: 20rpx; /* 10px */
+  margin-left: 20rpx; /* 10px */
 }
 
 .search {
-  padding: 16px;
+  padding: 32rpx; /* 16px */
 }
 
 .search-text {
   color: darkblue;
-  font-size: 14px; 
+  font-size: 28rpx; /* 14px */
 }
 
 .country-name {
-  font-size: 16px;
+  font-size: 30rpx; /* 16px */
   color: #333;
 }
 
 .data-name {
-  font-size: 14px;
+  font-size: 28rpx; /* 14px */
   font-weight: bold;
 }
 
 /* no-results */
 .no-results {
   color: #999;
-  font-size: 14px;
+  font-size: 28rpx; /* 14px */
   text-align: center;
 }
 
 .img-search-not-found {
-  height: 160px;
-  width: 160px;
+  height: 320rpx; /* 160px */
+  width: 320rpx; /* 160px */
 }

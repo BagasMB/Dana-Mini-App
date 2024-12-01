@@ -3,7 +3,12 @@
     <view onTap="openSearch">
       <f-input placeholder="Where are you traveling to?" class="no-label">
         <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
-        <image src="/assets/icons/filter.svg" slot="iconOutterRight" style="cursor: pointer;" onTap="handleTapIconOutterRight" />
+        <image
+          src="/assets/icons/filter.svg"
+          slot="iconOutterRight"
+          style="cursor: pointer;"
+          onTap="handleTapIconOutterRight"
+        />
       </f-input>
     </view>
   </view>
@@ -53,22 +58,24 @@
     </view>
   </view>
 
-  <!-- Filtered Countries -->
-  <block a:for="{{filteredCountries}}" a:key="letter">
-    <view class="divider">{{item.letter}}</view>
+  <view class="list">
+    <!-- Filtered Countries -->
+    <block a:for="{{filteredCountries}}" a:key="letter">
+      <view class="divider">{{item.letter}}</view>
 
-    <block a:for="{{item.countries}}" a:key="name">
-      <view
-        class="country-row"
-        data-country="{{item.name}}"
-        data-icon="{{item.icon}}"
-        data-type="{{item.type}}"
-        onTap="onCountries"
-      >
-        <image src="{{item.icon}}" class="country-icon" />
-        <text class="country-name">{{item.name}}</text>
-        <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
-      </view>
+      <block a:for="{{item.countries}}" a:key="name">
+        <view
+          class="country-row"
+          data-country="{{item.name}}"
+          data-icon="{{item.icon}}"
+          data-type="{{item.type}}"
+          onTap="onCountries"
+        >
+          <image src="{{item.icon}}" class="country-icon" />
+          <text class="country-name">{{item.name}}</text>
+          <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
+        </view>
+      </block>
     </block>
-  </block>
+  </view>
 </view>

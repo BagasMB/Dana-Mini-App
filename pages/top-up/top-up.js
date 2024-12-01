@@ -18,7 +18,22 @@ Page({
     activeCountry: null,
   },
 
-  onLoad() {},
+  onLoad() {
+    // Ambil nama negara pertama dari groupedCountries
+    let firstCountry = null;
+    if (
+      this.data.groupedCountries &&
+      this.data.groupedCountries.length > 0 &&
+      this.data.groupedCountries[0].countries &&
+      this.data.groupedCountries[0].countries.length > 0
+    ) {
+      firstCountry = this.data.groupedCountries[0].countries[0].name;
+    }
+
+    this.setData({
+      activeCountry: firstCountry,
+    });
+  },
 
   onTap() {
     my.navigateTo({ url: "/pages/history/history" });

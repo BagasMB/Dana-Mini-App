@@ -12,5 +12,5 @@
   -webkit-transition: background 280ms ease;
   transition: background 280ms ease;
   will-change: background;
-  border-radius: 8px;
+  border-radius: 16rpx;
 }

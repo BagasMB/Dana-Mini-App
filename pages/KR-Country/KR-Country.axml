@@ -105,7 +105,7 @@
       <view class="pay-confirm">
         <view class="pay-confirm_header">
           <view class="back">
-            <image class="back-icon" src="/assets/icons/back.svg" onTap="closeBuyESIM" />
+            <image class="back-icon" src="/assets/icons/back.svg" onTap="successBuyESIM" />
           </view>
           <text class="title-payment">Payment Confirmation</text>
         </view>
@@ -141,7 +141,7 @@
         </view>
       </view>
     </f-card-content>
-    <f-card-actions class="mb-20 mx-16">
+    <f-card-actions class="mb-32 mx-16">
       <f-btn onTap="successBuyESIM" type="primary">
         PAY Rp15.50
       </f-btn>
@@ -149,6 +149,7 @@
   </f-card>
 </f-sheet>
 
+<!-- Succcess -->
 <f-sheet ref="saveSuccessBuyESIM" roundedTop>
   <f-card>
     <view class="dash" />
@@ -185,7 +186,7 @@
         <text>Let's check the status in Transaction Detail!</text>
       </view>
     </f-card-content>
-    <f-card-actions class="my-20 mx-16">
+    <f-card-actions class="footer-btn">
       <f-btn
         onTap="closeSuccessBuyESIM"
         type="secondary"

@@ -1,7 +1,7 @@
 .provider-select__body {
   display: flex;
   align-items: center;
-  padding: 14px 0px 14px;
+  padding: 28rpx 0rpx 28rpx;
 }
 
 .provider-select__body .f-icon {
@@ -11,7 +11,7 @@
 .provider-select__name {
   flex-shrink: 0;
   flex-grow: 1;
-  margin: 0px 12px 0px;
+  margin: 0rpx 24rpx 0rpx;
 }
 
 .countryName{
@@ -19,9 +19,9 @@
   font-weight: bold;
 }
 .travel{
-  font-size: 14px;
+  font-size: 28rpx;
   color: #888;
-  margin-top: 4px;
+  margin-top: 8rpx;
 }
 
 .provider-select__btn {

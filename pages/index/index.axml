@@ -64,26 +64,18 @@
   </block>
 </view>
 
-
-<!--<provider-list providers="{{ providersSearchResult }}" isSearch="{{ isSearch }}" /> -->
-
 <view class="button">
   <btn-gradien onTap="allCountries">View All Countries and Regions</btn-gradien>
 </view>
 
 <view class="help-box">
-  <view>
-    <text class="help-box-title">
-      Need Help?
-    </text>
-  </view>
+  <text class="help-box-title">
+    Need Help?
+  </text>
   <text class="help-box-text">
-    Contact 24/7 Customer Service on
-    <text class="help-box-text2">
-      WhatsaApp
-      <text class="link"> +13322371910</text> or email
-      <text class="link"> support@KnowRoaming.com</text>
-    </text>
+    Contact 24/7 Customer Service on WhatsaApp
+    <text class="link">+13322371910</text> or email
+    <text class="link">support@KnowRoaming.com</text>
   </text>
   <view class="contact-info">
     <image src="/assets/icons/heandset.svg" alt="Customer Service Icon" class="contact-icon" />

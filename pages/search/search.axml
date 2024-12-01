@@ -24,14 +24,14 @@
     </view>
   </block>
 
-  <view a:if="{{isSearching && filteredData.length === 0}}" class="f-text-center mt-32">
+  <view a:if="{{isSearching && filteredData.length === 0}}" class="f-text-center not-fond mt-32">
     <image 
       class="mx-auto img-search-not-found" 
       src="https://a.m.dana.id/resource/imgs/miniprogram/search-not-found.svg"/>
     <view class="f-title title-18 my-8">
       Oops, search not found.
     </view>
-    <text>Seems like we can’t find the country you’re looking for. Please check your spelling and try again.</text>
+    <text style="color: #727272;" class="body-14">Seems like we can’t find the country you’re looking for. Please check your spelling and try again.</text>
   </view>
 
   <block a:if="{{!isSearching}}">

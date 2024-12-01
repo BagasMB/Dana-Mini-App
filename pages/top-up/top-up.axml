@@ -6,7 +6,6 @@
 
 <view class="content">
   <!-- Filtered Countries -->
-  
   <block a:for="{{groupedCountries}}" a:key="letter">
     <block a:for="{{item.countries}}" a:key="name">
       <view class="country-row" onTap="toggleDropdown" data-name="{{item.name}}">
@@ -45,12 +44,18 @@
 
 <view class="footer">
   <view class="top-section">
-    <view class="top-text">
-      <text class="line">The data packages are</text>
-      <text class="line">available for devices that</text>
-      <text class="line">support eSIM</text>
-    </view>
-    <f-btn type="secondary" size="small">Compatible Devices</f-btn>
+    <text class="top-text">
+      Tha data packages are
+      <view>
+        available for devices that
+      </view>
+      <view>
+        support eSIM.
+      </view>
+    </text>
+    <f-btn type="secondary" size="small">
+      Compatible Devices
+    </f-btn>
   </view>
 
   <view class="bottom-section">

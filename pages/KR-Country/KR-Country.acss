@@ -1,33 +1,33 @@
 /* Start Icon Header */
 .country-icon {
-  width: 42px;
-  height: 42px;
-  margin-right: 5px;
-  margin-left: 5px;
+  width: 84rpx;
+  height: 84rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
 }
 
 /* End Icon Header */
 
 /* Start List Paket Data */
 .pakets {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 
 .paket {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #ddd;
   cursor: pointer;
 }
 
 .paket-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  border: 4rpx solid #ddd;
+  border-radius: 16rpx;
 }
 
 .info {
@@ -37,40 +37,39 @@
 }
 
 .data {
-  font-size: 16px;
+  font-size: 32rpx;
 }
 
 .detail {
   display: flex;
   align-content: center;
-  gap: 10px;
-  margin-top: 4px;
+  gap: 20rpx;
+  margin-top: 8rpx;
 }
 
 .duration {
-  font-size: 14px;
+  font-size: 28rpx;
   align-self: start;
   color: #888;
-
 }
 
 .country {
-  font-size: 14px;
+  font-size: 28rpx;
   color: #108EE9;
   /* Warna biru sesuai contoh */
 }
 
 .price {
-  font-size: 16px;
+  font-size: 32rpx;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 .dana-icon {
-  width: 20px;
-  height: 20px;
-  margin-top: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
   fill: currentColor;
 }
 
@@ -82,23 +81,22 @@
 .selected {
   background-color: #EEEEEE;
   width: 100vw;
-  margin-left: -16px;
-  margin-right: -16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin-left: -32rpx;
+  margin-right: -32rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
   border-radius: 0;
 }
 
 /* End List Paket Data */
 
-
 /* Start Footer */
 .footer {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 600px;
-  margin: 20px 0px;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 16rpx;
+  padding: 40rpx;
+  max-width: 1200rpx;
+  margin: 40rpx 0;
 }
 
 .top-section {
@@ -108,7 +106,7 @@
 }
 
 .top-text {
-  font-size: 13px;
+  font-size: 26rpx;
   color: #626262;
 }
 
@@ -116,8 +114,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
 }
 
 .feature-item {
@@ -128,15 +126,15 @@
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 8rpx;
 }
 
 .feature-item text {
-  font-size: 10px;
+  font-size: 18rpx;
   color: #313131;
-  margin-right: 10px;
+  margin-right: 20rpx;
   white-space: nowrap;
 }
 
@@ -147,28 +145,27 @@
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+  border: 2rpx solid #e0e0e0;
   width: 100%;
 }
 
 .card-image {
-  width: 100px;
-  height: 80px;
-  margin-right: 17px;
-  margin-left: 0;
-  border-bottom-left-radius: 8px;
-  border-top-left-radius: 8px;
+  width: 220rpx;
+  height: 160rpx;
+  margin-right: 34rpx;
+  border-bottom-left-radius: 16rpx;
+  border-top-left-radius: 16rpx;
   background-color: #E5E5E5;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-esim{
-  width: 62px;
-  height: 50px;
+.image-esim {
+  width: 124rpx;
+  height: 100rpx;
 }
 
 .card-content {
@@ -177,34 +174,33 @@
 
 .card-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 32rpx;
   font-weight: 600;
   color: #333333;
 }
 
 .card-description {
-  margin: 4px 0 0;
-  font-size: 11px;
+  margin: 8rpx 0 0;
+  font-size: 22rpx;
   color: #666666;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 400rpx;
 }
 
 .card-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 48rpx;
+  height: 48rpx;
   background-color: #f0f0f0;
   border-radius: 50%;
   color: #cccccc;
   cursor: pointer;
-  margin-right: 12px;
+  margin-right: 24rpx;
 }
-
 /* END Card New E-SIM */
 
 /* Start Pop Up Pay Confirmation */
@@ -212,30 +208,29 @@
   display: flex;
   align-items: center;
   background-color: white;
-  padding: 10px 20px;
+  padding: 20rpx 40rpx;
 }
 
 .img-protec {
-  width: 96px;
-  height: 20px;
+  width: 192rpx;
+  height: 40rpx;
 }
 
 .spacer {
   flex-direction: 1;
-  /* Isi ruang kosong untuk pusatkan img-pay */
 }
 
 .img-pay {
-  margin-left: 68px;
-  width: 50px;
-  height: 24px;
+  margin-left: 100rpx;
+  width: 100rpx;
+  height: 48rpx;
 }
 
 /* Payment Confirmation Section */
 .pay-confirm {
   background: linear-gradient(to bottom, #007bff, #00aaff);
   color: white;
-  padding: 20px;
+  padding: 40rpx;
   text-align: center;
   position: relative;
 }
@@ -243,58 +238,58 @@
 .pay-success {
   background: linear-gradient(to bottom, #007bff, #00aaff);
   color: white;
-  padding: 20px;
+  padding: 40rpx;
   text-align: center;
   position: relative;
   width: 100%;
-  height: 442px;
+  height: 800rpx;
 }
 
 .pay-confrim_header {
-  margin-bottom: 40px;
+  margin-bottom: 80rpx;
 }
 
 .back {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 40rpx;
+  top: 40rpx;
   color: white;
-  font-size: 20px;
+  font-size: 40rpx;
   text-decoration: none;
   cursor: pointer;
 }
 
 .back-icon {
-  width: 21px;
-  height: 21px;
+  width: 42rpx;
+  height: 42rpx;
 }
 
 .title-payment {
   margin: 0;
-  font-size: 18px;
+  font-size: 36rpx;
 }
 
 .item {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40rpx;
 }
 
 .img-circle {
-  height: 56px;
-  width: 56px;
+  height: 112rpx;
+  width: 112rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
-  border: 2px solid #ddd;
+  margin-right: 40rpx;
+  border: 4rpx solid #ddd;
   border-radius: 50%;
   background-color: white;
 }
 
 .item-img {
-  height: 36px;
-  width: 36px;
+  height: 72rpx;
+  width: 72rpx;
 }
 
 .details {
@@ -304,41 +299,41 @@
 }
 
 .item-title {
-  font-size: 18px;
+  font-size: 36rpx;
   margin: 0;
 }
 
 .item-desc {
-  font-size: 14px;
+  font-size: 28rpx;
   color: #e0e0e0;
-  margin-top: 4px;
+  margin-top: 8rpx;
 }
 
-/* Tampilan Kosong  */
+/* Tampilan Kosong */
 .blank {
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 200rpx;
+  padding-bottom: 100rpx;
   width: 100%;
   background-color: #F5F5F5;
 }
 
 /* Balance */
 .balances {
-  box-shadow: 0 -5px 4px #00000029;
+  box-shadow: 0 -10rpx 8rpx #00000029;
 }
 
 .balance {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  margin: 0px 16px;
+  padding: 20rpx 0;
+  margin: 0 32rpx;
 }
 
 .balance-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
 }
 
 .balance-left {
@@ -348,39 +343,39 @@
 }
 
 .balance-dana {
-  font-size: 14px;
+  font-size: 28rpx;
   color: #888;
-  margin-bottom: 4px;
+  margin-bottom: 8rpx;
 }
 
 .balance-price {
-  font-size: 18px;
+  font-size: 36rpx;
 }
 
 /* End Pop Up Pay Confirmation */
 
-/* Tambhan Pop Up Success */
+/* Tambahan Pop Up Success */
 .info-padding {
-  padding-top: 16px;
+  padding-top: 32rpx;
   text-align: center;
   color: #727272;
 }
 
 .icon-coin {
-  width: 113px;
-  height: 72px;
-  margin: 35px 0;
+  width: 226rpx;
+  height: 144rpx;
+  margin: 70rpx 0;
 }
 
 .trans-details {
-  font-size: 27px;
+  font-size: 54rpx;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 
 .trans-desc {
-  font-size: 27px;
-  margin-bottom: 30px;
+  font-size: 54rpx;
+  margin-bottom: 60rpx;
 }
 
 .btn-shere {
@@ -388,20 +383,24 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border: 2px solid white;
-  border-radius: 30px;
-  padding: 10px 16px;
-  margin-bottom: 10px;
+  border: 4rpx solid white;
+  border-radius: 60rpx;
+  padding: 20rpx 32rpx;
+  margin-bottom: 20rpx;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 28rpx;
   cursor: pointer;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .icon-shere {
-  margin-right: 8px;
-  width: 18px;
-  height: 18px;
+  margin-right: 16rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.footer-btn{
+  margin: 20rpx 40rpx 60rpx;
 }

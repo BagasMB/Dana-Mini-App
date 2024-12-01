@@ -43,7 +43,7 @@
         <view>
           <text class="data-title">{{item.iccid}}</text>
           <text class="data-title">{{item.dataRemaining}}</text>
-          <text class="data-title">{{item.date}}</text>
+          <text class="data-title" style="color: #888;">{{item.date}}</text>
           <text class="data-title-invoice">Download</text>
         </view>
       </view>
@@ -94,7 +94,7 @@
         <view>
           <text class="data-title">{{item.iccid}}</text>
           <text class="data-title">{{item.dataRemaining}}</text>
-          <text class="data-title">{{item.date}}</text>
+          <text class="data-title" style="color: #888;">{{item.date}}</text>
           <text class="data-title-invoice">Download</text>
         </view>
       </view>
@@ -110,12 +110,18 @@
 
 <view class="footer">
   <view class="top-section">
-    <view class="top-text">
-      <text class="line">The data packages are</text>
-      <text class="line">available for devices that</text>
-      <text class="line">support eSIM</text>
-    </view>
-    <f-btn type="secondary" size="small">Compatible Devices</f-btn>
+    <text class="top-text">
+      Tha data packages are
+      <view>
+        available for devices that
+      </view>
+      <view>
+        support eSIM.
+      </view>
+    </text>
+    <f-btn type="secondary" size="small">
+      Compatible Devices
+    </f-btn>
   </view>
 
   <view class="bottom-section">

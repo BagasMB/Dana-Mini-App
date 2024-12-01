@@ -1,28 +1,27 @@
 .container {
-  margin-bottom: 9px;
+  margin-bottom: 18rpx; /* 9px */
 }
 
 .search {
-  padding: 16px;
+  padding: 32rpx; /* 16px */
   background-color: #4C4C4C;
 }
 
 .menu {
-  padding: 20px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 40rpx; /* 20px */
+  border-bottom: 1rpx solid #e0e0e0;
 }
 
 .text-stay {
-  font-size: 20px;
-  padding-bottom: 10px;
+  font-size: 40rpx; /* 20px */
+  padding-bottom: 20rpx; /* 10px */
   font-weight: bold;
-
 }
 
 .icons {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 40rpx; /* 20px */
   cursor: pointer;
 }
 
@@ -32,36 +31,36 @@
 }
 
 .icon-item view text {
-  margin-top: 5px;
-  font-size: 12px;
+  margin-top: 10rpx; /* 5px */
+  font-size: 24rpx; /* 12px */
   color: #333;
 }
 
 .icon-svg {
-  width: 30px;
-  height: 30px;
+  width: 60rpx; /* 30px */
+  height: 60rpx; /* 30px */
 }
 
 .arrow-icon {
-  width: 23px;
-  height: 23px;
+  width: 46rpx; /* 23px */
+  height: 46rpx; /* 23px */
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 20rpx; /* 10px */
 }
 
 .tabs {
   display: flex;
   justify-content: center;
-  margin-top: 9px;
+  margin-top: 18rpx; /* 9px */
 }
 
 .tab {
-  padding: 7px 11px;
-  margin: 0 5px;
-  border-radius: 30px;
+  padding: 14rpx 22rpx; /* 7px 11px */
+  margin: 0 10rpx; /* 5px */
+  border-radius: 60rpx; /* 30px */
   background-color: #fff;
-  border: 1px solid #ccc;
-  font-size: 14px;
+  border: 1rpx solid #ccc;
+  font-size: 28rpx; /* 14px */
   color: #555;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -73,31 +72,35 @@
   border: none;
 }
 
+.list{
+  margin-bottom: 70rpx;
+}
+
 .divider {
   background-color: #f0f0f0;
   color: #888;
-  font-size: 14px;
-  padding: 5px 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+  font-size: 28rpx; /* 14px */
+  padding: 10rpx 20rpx; /* 5px 10px */
+  margin: 20rpx 0; /* 10px */
+  border-radius: 10rpx; /* 5px */
 }
 
 .country-row {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 0;
+  border-bottom: 2rpx solid #e0e0e0;
+  padding: 20rpx 0; /* 10px 0 */
   cursor: pointer;
 }
 
 .country-icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 64rpx; /* 32px */
+  height: 64rpx; /* 32px */
+  margin-right: 20rpx; /* 10px */
+  margin-left: 20rpx; /* 10px */
 }
 
 .country-name {
-  font-size: 16px;
+  font-size: 30rpx; /* 16px */
   color: #333;
 }

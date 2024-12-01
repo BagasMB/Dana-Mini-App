@@ -41,11 +41,6 @@
   object-fit: cover;
 }
 
-.garis{
-  border-top: 1px solid #D1D1D1;
-  padding: 10px 30px;
-}
-
 
 /* Details as footer */
 .details {
@@ -98,16 +93,5 @@
 
 /* Button styling */
 .button-container {
-  width: 100%;
-  padding: 16px;
-  background-color: #e5e7eb;
-}
-
-.install-btn {
-  width: 100%;
-  padding: 12px;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  background-image: linear-gradient(to right, #7c3aed, #3b82f6);
+  margin-bottom: 40rpx;
 }

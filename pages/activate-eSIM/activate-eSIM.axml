@@ -10,7 +10,6 @@
 
   <!-- Details -->
   <view class="details">
-    <view class="garis"></view>
     <view class="toggle" onTap="toggleExpand">
       <text class="label">Transaction Detail</text>
       <image
@@ -29,8 +28,7 @@
         <text class="value">28 Oct 2024</text>
       </view>
     </view>
-    <btn-gradien onTap="openManualInstall">Manual Install</btn-gradien>
-
+    <btn-gradien onTap="openManualInstall" class="button-container">Manual Install</btn-gradien>
   </view>
 
 
