@@ -4,6 +4,21 @@ page {
   font-family: Arial, sans-serif;
 }
 
+.language-select {
+  margin-bottom: 20rpx;
+  text-align: right;
+}
+
+.language-picker {
+  font-size: 28rpx;
+  color: #007aff;
+  padding: 10rpx;
+  border: 1rpx solid #007aff;
+  border-radius: 8rpx;
+  display: inline-block;
+  cursor: pointer;
+}
+
 .card {
   background-color: white;
   border-radius: 16rpx;

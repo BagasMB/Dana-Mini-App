@@ -105,7 +105,7 @@
       <view class="pay-confirm">
         <view class="pay-confirm_header">
           <view class="back">
-            <image class="back-icon" src="/assets/icons/back.svg" onTap="successBuyESIM" />
+            <image class="back-icon" src="/assets/icons/back.svg" onTap="closeBuyESIM" />
           </view>
           <text class="title-payment">Payment Confirmation</text>
         </view>
@@ -136,7 +136,7 @@
             <text class="balance-price">Rp15.50</text>
           </view>
           <view class="balance-right">
-            <f-select class="mb-16 pilih" data="{{select}}" />
+            <f-select-rounded class="mb-16" data="{{select}}" />
           </view>
         </view>
       </view>

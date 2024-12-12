@@ -1,5 +1,14 @@
+import translations from '/data/translations'
+
 Page({
   data: {
+    // Bahasa yang didukung
+    languages: ['Bahasa Indonesia', 'English'],
+    selectedLanguageIndex: 0, // Default ke bahasa Indonesia
+    translations,
+    // Konten yang ditampilkan
+    content: {},
+
     groupedCountries: [
       {
         letter: "Popular Countries",
@@ -19,6 +28,46 @@ Page({
         ],
       },
     ],
+
+    select: [
+      { id: 0,  name: 'Indonesia', icon: "/assets/icons/indonesia.svg"},
+      { id: 1,  name: 'English', icon: "/assets/icons/inggris.svg"},
+    ],
+  },
+
+  // Pada halaman dimuat
+  onLoad() {
+    // Deteksi bahasa perangkat
+    const systemLanguage = my.getSystemInfoSync().language;
+    const isIndonesian = systemLanguage.startsWith('id');
+    const defaultLanguage = isIndonesian ? 0 : 1; // 0 untuk Indonesia, 1 untuk Inggris
+
+    // Atur bahasa default
+    this.setData({
+      selectedLanguageIndex: defaultLanguage,
+    });
+
+    // Render konten sesuai bahasa
+    this.updateContent(defaultLanguage);
+  },
+
+   // Ganti bahasa saat dropdown berubah
+   onLanguageChange(e) {
+    const newLanguageIndex = e.detail.value;
+    this.setData({
+      selectedLanguageIndex: newLanguageIndex,
+    });
+
+    // Perbarui konten sesuai bahasa yang dipilih
+    this.updateContent(newLanguageIndex);
+  },
+
+  // Perbarui konten berdasarkan bahasa
+  updateContent(languageIndex) {
+    const selectedLang = languageIndex === 0 ? 'id' : 'en';
+    this.setData({
+      content: this.data.translations[0].ladingpage[selectedLang],
+    });
   },
 
 
@@ -38,8 +87,14 @@ Page({
     }
   },
 
-  openSearch() {
-    my.navigateTo({ url: '/pages/search/search'});
+  openSearch(e) {
+    const query = e.detail.value; // Ambil nilai input
+    if (query.length > 0) {
+      // Navigasi ke halaman pencarian dengan query sebagai parameter
+      my.navigateTo({
+        url: `/pages/search/search?query=${encodeURIComponent(query)}`
+      });
+    }
   },
   
   allCountries(){
@@ -50,46 +105,23 @@ Page({
     console.log('Tap icon outter right')
   },
 
+  openMyESIM(){
+    my.navigateTo({ url: '/pages/history/history'});
+  },
+
   abouteSIM(){
     my.navigateTo({
       url: '../E-SIM-info/E-SIM-info',
     });
   },
 
-  onLoad(query) {
-    // Page load
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
-    this.setData({ providersSearchResult: this.data.providers })
+  saveRefDialogSetting(ref) {
+    this.dialogSettingRef = ref
   },
-
-  onShareAppMessage() {
-    // Back to custom sharing information
-    return {
-      title: 'DANA Mini Program Template',
-      desc: 'DANA Mini Program tempalate',
-      path: 'pages/index/index',
-    };
+  showDialogSetting () {
+    this.dialogSettingRef.show()
   },
-
-  onSearchInput(e)  {
-    const searchKey = e.detail.value || ''
-    const lowerCaseSearchKey = searchKey.toLowerCase()
-    const filtered = this.data.providers.filter(provider => {
-      const lowerCaseProviderName = provider.name.toLowerCase()
-      if (lowerCaseProviderName.indexOf(lowerCaseSearchKey) !== -1) {
-        return provider
-      }
-    })
-    if (searchKey) {
-      this.setData({ 
-        providersSearchResult: filtered,
-        isSearch: true,
-      })
-    } else {
-      this.setData({
-        providersSearchResult: this.data.providers,
-        isSearch: false,
-      })
-    }
+  closeDialogSetting () {
+    this.dialogSettingRef.hide()
   },
 });

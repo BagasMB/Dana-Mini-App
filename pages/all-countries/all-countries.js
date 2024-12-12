@@ -71,6 +71,10 @@ Page({
     my.navigateTo({ url: '/pages/search/search'});
   },
 
+  openMyESIM(){
+    my.navigateTo({ url: '/pages/history/history'});
+  },
+
   abouteSIM(){
     my.navigateTo({
       url: '../E-SIM-info/E-SIM-info',

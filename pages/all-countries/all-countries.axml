@@ -24,7 +24,7 @@
           <text>Store</text>
         </view>
       </view>
-      <view class="icon-item">
+      <view class="icon-item" onTap="openMyESIM">
         <image src="/assets/icons/e-sim-2.svg" class="icon-svg" />
         <view>
           <text>My eSIM</text>

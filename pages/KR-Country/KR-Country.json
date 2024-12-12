@@ -11,7 +11,7 @@
     "f-card-actions": "/components/fiat/f-card-actions/f-card-actions",
     "f-sheet": "/components/fiat/f-sheet/f-sheet",
 
-    "f-select": "/components/fiat/f-select/f-select",
+    "f-select-rounded": "/components/f-select-rounded/f-select-rounded",
 
     "f-cell": "/components/fiat/f-cell/f-cell",
     "f-cell-action": "/components/fiat/f-cell-action/f-cell-action",

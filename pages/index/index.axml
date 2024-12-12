@@ -1,21 +1,25 @@
-<!--<import-sjs name="element" from="/utils/element.sjs"/> -->
-
 <view class="header">
   <image src="../../assets/images/knowroaming.png" class="logo-knowroaming" />
 </view>
 <view class="search">
-  <view onTap="openSearch">
-    <f-input placeholder="Where are you traveling to?" class="no-label">
-      <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
-      <image src="/assets/icons/filter.svg" slot="iconOutterRight" style="cursor: pointer;" onTap="handleTapIconOutterRight" />
-    </f-input>
-  </view>
+  <f-input
+    placeholder="Where are you traveling to?"
+    class="no-label"
+    onInput="openSearch"
+    value="{{search}}"
+  >
+    <image src="/assets/icons/search.svg" slot="iconInnerLeft" />
+    <image
+      src="/assets/icons/filter.svg"
+      slot="iconOutterRight"
+      style="cursor: pointer;"
+      onTap="showDialogSetting"
+    />
+  </f-input>
 </view>
 
 <view class="menu">
-  <text class="text-stay">
-    Stay Connected on Every Journey with a Travel eSIM
-  </text>
+  <text class="text-stay">{{content.title1}}</text>
   <view class="icons">
     <view class="icon-item">
       <image src="/assets/icons/home.svg" class="icon-svg" />
@@ -23,7 +27,7 @@
         <text>Store</text>
       </view>
     </view>
-    <view class="icon-item">
+    <view class="icon-item" onTap="openMyESIM">
       <image src="/assets/icons/e-sim-2.svg" class="icon-svg" />
       <view>
         <text>My eSIM</text>
@@ -84,3 +88,38 @@
     </text>
   </view>
 </view>
+
+<f-dialog ref="saveRefDialogSetting">
+  <f-card class="p-16 mx-16">
+    <text class="text-stay">
+      Setting
+    </text>
+    <f-card-content class="mb-16">
+      <view style="margin-top: 30rpx;">
+        <text class="mb-4">Language</text>
+        <!--<f-select data="{{select}}" /> -->
+        <!-- Dropdown Bahasa -->
+        <view class="language-select">
+          <picker
+            mode="selector"
+            range="{{languages}}"
+            value="{{selectedLanguageIndex}}"
+            onChange="onLanguageChange"
+          >
+            <view class="language-picker">
+              {{languages[selectedLanguageIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </f-card-content>
+    <f-card-actions>
+      <f-btn onTap="closeDialogSetting" type="secondary" class="mr-8">
+        Cancel
+      </f-btn>
+      <f-btn onTap="closeDialogSetting" type="primary">
+        Ok
+      </f-btn>
+    </f-card-actions>
+  </f-card>
+</f-dialog>

@@ -3,7 +3,7 @@
 }
 
 .search {
-  padding: 32rpx; /* 16px */
+  padding: 32rpx;
   background-color: #4C4C4C;
 }
 
@@ -89,18 +89,22 @@
   display: flex;
   align-items: center;
   border-bottom: 2rpx solid #e0e0e0;
-  padding: 20rpx 0; /* 10px 0 */
+  padding: 20rpx 0;
   cursor: pointer;
 }
 
+.country-row:last-child {
+  border-bottom: none;
+}
+
 .country-icon {
-  width: 64rpx; /* 32px */
-  height: 64rpx; /* 32px */
-  margin-right: 20rpx; /* 10px */
-  margin-left: 20rpx; /* 10px */
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
 }
 
 .country-name {
-  font-size: 30rpx; /* 16px */
+  font-size: 30rpx;
   color: #333;
 }

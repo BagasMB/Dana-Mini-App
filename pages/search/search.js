@@ -23,13 +23,17 @@ Page({
       { name: "France", icon: "/assets/countries/france.png", type: "Europe" },
       { name: "Gabon", icon: "/assets/countries/gabon.png", type: "Africa" },
       { name: "Gambia", icon: "/assets/countries/gambia.png", type: "Africa" },
+      { name: "Kanada", icon: "/assets/countries/kanada.png", type: "America" },
+      { name: "Turkey", icon: "/assets/countries/turkey.png" , type: "Asia" },
+      { name: "USA", icon: "/assets/countries/usa.png", type: "America"},
+      { name: "UK", icon: "/assets/countries/uk.png" , type: "Europe"},
     ],
     dataBenua: [
-      { name: "Europe", type: "Continent", icon: "/assets/countries/europe.svg" },
-      { name: "Asia", type: "Continent", icon: "/assets/countries/asia.png" },
-      { name: "America", type: "Continent", icon: "/assets/countries/america.png" },
-      { name: "Australia", type: "Continent", icon: "/assets/countries/australia.png" },
-      { name: "Africa", type: "Continent", icon: "/assets/countries/africa.png" },
+      { name: "Europe", type: "Regions", icon: "/assets/countries/europe.png" },
+      { name: "Asia", type: "Regions", icon: "/assets/countries/asia.png" },
+      { name: "America", type: "Regions", icon: "/assets/countries/america.png" },
+      { name: "Australia", type: "Regions", icon: "/assets/countries/australia.png" },
+      { name: "Africa", type: "Regions", icon: "/assets/countries/africa.png" },
     ],
     dataGlobal: { name: "Global", type: "Global", icon: "/assets/countries/global.svg" },
   },
@@ -50,12 +54,21 @@ Page({
     }
   },
 
+  onLoad(query) {
+    const searchQuery = query.query || ''; 
+    this.setData({ search: searchQuery });
+
+    if (searchQuery.length >= 3) {
+      this.handleSearch({ detail: { value: searchQuery } });
+    }
+  },
+
   handleSearch(e) {
     const query = e.detail.value.toLowerCase(); 
     const isSearching = query.length > 0;
     this.setData({ search: e.detail.value, isSearching });
 
-    if (query.length < 3) {
+    if (query.length < 0) {
       this.setData({ filteredData: [] });
       return;
     }
@@ -64,8 +77,8 @@ Page({
       country.name.toLowerCase().startsWith(query)
     );
 
-    const matchingContinents = this.data.dataBenua.filter((continent) =>
-    continent.name.toLowerCase().startsWith(query)
+    const matchingRegions = this.data.dataBenua.filter((regions) =>
+      regions.name.toLowerCase().startsWith(query)
     );
 
     // Searching Global
@@ -74,23 +87,23 @@ Page({
       return;
     }
 
-    // Searching Continent
-    if (matchingContinents.length > 0) {
+    // Searching Regions
+    if (matchingRegions.length > 0) {
       this.setData({
-        filteredData: [...matchingContinents, this.data.dataGlobal],
+        filteredData: [...matchingRegions, this.data.dataGlobal],
       });
       return;
     }
 
-    // Searching Countries and Continent
+    // Searching Countries and Regions
     if (matchingCountries.length > 0) {
       const matchingCountriesNames = matchingCountries.map((country) => country.type);
-      const relatedContinents = this.data.dataBenua.filter((continent) =>
-        matchingCountriesNames.includes(continent.name)
+      const relatedRegions = this.data.dataBenua.filter((regions) =>
+        matchingCountriesNames.includes(regions.name)
       );
 
       this.setData({
-        filteredData: [...matchingCountries, ...relatedContinents, this.data.dataGlobal],
+        filteredData: [...matchingCountries, ...relatedRegions, this.data.dataGlobal],
       });
       return;
     }

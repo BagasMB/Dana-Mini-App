@@ -1,6 +1,14 @@
 {
   "usingComponents": {
     "f-input": "/components/fiat/f-input/f-input",
-    "btn-gradien": "/components/btn-gradien/btn-gradien"
+    "f-btn": "/components/fiat/f-btn/f-btn",
+    "btn-gradien": "/components/btn-gradien/btn-gradien",
+    
+    "f-dialog": "/components/fiat/f-dialog/f-dialog",
+    "f-card": "/components/fiat/f-card/f-card",
+    "f-card-content": "/components/fiat/f-card-content/f-card-content",
+    "f-card-actions": "/components/fiat/f-card-actions/f-card-actions",
+
+    "f-select": "/components/fiat/f-select/f-select"
   }
 }

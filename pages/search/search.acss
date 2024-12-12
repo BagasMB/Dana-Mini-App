@@ -8,19 +8,10 @@
   padding: 0rpx 25rpx;
 }
 
-/* search-bar */
-.search-bar {
-  width: 100%;
-  max-width: 800rpx; /* 400px */
-  padding: 16rpx; /* 8px */
-  margin-bottom: 32rpx; /* 16px */
-  border: 2rpx solid #ccc; /* 1px */
-  border-radius: 8rpx; /* 4px */
-}
-
 /* data-grid */
 .data-grid {
   width: 100%;
+  margin-bottom: 20rpx;
 }
 
 /* data-card */

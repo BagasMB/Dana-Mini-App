@@ -1,4 +1,4 @@
-import FiatComponent from '../core/fiat-component'
+import FiatComponent from '/components/fiat/core/fiat-component'
 import addClass from '/utils/addClass'
 import removeClass from '/utils/removeClass'
 
@@ -7,7 +7,6 @@ Component(FiatComponent({
   mixins: [],
   data: {
     selectValue: '',
-    selectIcon: '',
     selectCssClass: '',
     selectTypeClass: 'f-select__text-box',
     index: 0,
@@ -54,11 +53,9 @@ Component(FiatComponent({
       });
     },
     setOption(e) {
-      let dataset = e.target.targetDataset.name;
-      let datasetIcon = e.target.targetDataset.icon;
+      let dataset = e.target.targetDataset.name
       this.setData({
-        selectValue: dataset,       
-        selectIcon: datasetIcon,
+        selectValue: dataset,
         isShow: false
       });
     },
