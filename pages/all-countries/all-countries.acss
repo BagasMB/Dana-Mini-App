@@ -2,6 +2,21 @@
   margin-bottom: 18rpx; /* 9px */
 }
 
+.language-select {
+  margin: 20rpx 0;
+  text-align: left;
+}
+
+.language-picker {
+  font-size: 28rpx;
+  color: #007aff;
+  padding: 10rpx;
+  border: 1rpx solid #007aff;
+  border-radius: 8rpx;
+  display: inline-block;
+  cursor: pointer;
+}
+
 .search {
   padding: 32rpx;
   background-color: #4C4C4C;

@@ -1,6 +1,11 @@
 {
   "usingComponents": {
     "f-input": "/components/fiat/f-input/f-input",
-    "provider-list": "/components/provider-list/provider-list"
+    "f-btn": "/components/fiat/f-btn/f-btn",
+  
+    "f-dialog": "/components/fiat/f-dialog/f-dialog",
+    "f-card": "/components/fiat/f-card/f-card",
+    "f-card-content": "/components/fiat/f-card-content/f-card-content",
+    "f-card-actions": "/components/fiat/f-card-actions/f-card-actions"
   }
 }

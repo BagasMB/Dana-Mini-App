@@ -2,8 +2,9 @@
   <cell-country
     class="mt-8 mb-12"
     countryName="{{ countryName }}"
-    countryIcon={{ countryIcon }}
+    countryIcon="{{ countryIcon }}"
     onReset="onReset"
+    nameBtn="{{content.btnchange}}"
   />
 
   <view class="pakets">
@@ -32,26 +33,20 @@
   </view>
 
   <btn-gradien class="buy-button mb-16" onTap="openBuyESIM" disabled="{{!buyEnabled}}">
-    BUY eSIM
+    {{content.btnbuy}}
   </btn-gradien>
 
   <f-checkbox class="c-label">
-    I have read and accepted the Terms and Conditions and Privacy Policy. I also acknowledge that in order for the eSIM to work, my device needs to be eSIM compatible and not locked to any specific network.
+    {{content.ceklist}}  
   </f-checkbox>
 
   <view class="footer">
     <view class="top-section">
       <text class="top-text">
-        Tha data packages are
-        <view>
-          available for devices that
-        </view>
-        <view>
-          support eSIM.
-        </view>
+        {{content.title1}}
       </text>
       <f-btn type="secondary" size="small">
-        Compatible Devices
+        {{content.btncompatible}}
       </f-btn>
     </view>
 
@@ -76,13 +71,12 @@
           <image class="image-esim" src="/assets/images/eSIM.svg" />
         </view>
         <view class="card-content">
-          <text class="card-title">New to eSIMs?</text>
-          <text class="card-description">
-            Find out what they are and how
-            <view>
-              they work.
-            </view>
-          </text>
+          <text class="card-title">{{content.title2}}</text>
+          <view>
+            <text class="card-description">
+              {{content.caption}}
+            </text>
+          </view>
         </view>
         <image src="/assets/icons/chev-right.svg" class="card-arrow" />
       </view>

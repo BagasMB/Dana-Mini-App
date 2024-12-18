@@ -1,14 +1,3 @@
-<!-- Dropdown Bahasa -->
-<view class="language-select">
-  <picker mode="selector" range="{{languages}}" value="{{selectedLanguageIndex}}" onChange="onLanguageChange">
-    <view class="language-picker">
-      {{languages[selectedLanguageIndex]}}
-    </view>
-  </picker>
-</view>
-
-<!-- <f-select data="{{select}}" value="{{selectedLanguageIndex}}" onChange="onLanguageChange" /> -->
-
 <!-- Section 1 -->
 <view class="card">
   <text class="card-title">{{content.title1}}</text>

@@ -45,16 +45,10 @@
 <view class="footer">
   <view class="top-section">
     <text class="top-text">
-      Tha data packages are
-      <view>
-        available for devices that
-      </view>
-      <view>
-        support eSIM.
-      </view>
+      {{content.text1}}
     </text>
     <f-btn type="secondary" size="small">
-      Compatible Devices
+      {{content.btncompatible}}
     </f-btn>
   </view>
 

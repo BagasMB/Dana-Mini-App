@@ -101,12 +101,13 @@
 
 .top-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .top-text {
-  font-size: 26rpx;
+  flex: 1;
+  font-size: 24rpx;
+  margin-right: 15rpx;
   color: #626262;
 }
 
@@ -174,7 +175,7 @@
 
 .card-title {
   margin: 0;
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: 600;
   color: #333333;
 }
@@ -183,10 +184,6 @@
   margin: 8rpx 0 0;
   font-size: 22rpx;
   color: #666666;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 400rpx;
 }
 
 .card-arrow {

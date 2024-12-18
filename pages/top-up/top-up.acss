@@ -129,12 +129,13 @@
 
 .top-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .top-text {
+  flex: 1;
   font-size: 26rpx;
+  margin-right: 15rpx;
   color: #626262;
 }
 
@@ -143,7 +144,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 40rpx;
-  margin-bottom: 20rpx;
 }
 
 .feature-item {

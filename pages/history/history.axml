@@ -1,10 +1,10 @@
 <view class="header">
   <text class="text-title">
-    My eSIMs
+    {{content.title}}
   </text>
 </view>
 
-<view class="divider">Most Recent</view>
+<view class="divider">{{content.subtitle1}}</view>
 
 <view class="content">
   <view class="plans">
@@ -49,7 +49,7 @@
       </view>
 
       <view class="button">
-        <btn-gradien onTap="openActivateeSIM">Activate eSIM</btn-gradien>
+        <btn-gradien onTap="openActivateeSIM">{{content.btnActive}}</btn-gradien>
       </view>
     </block>
   </view>
@@ -101,7 +101,7 @@
 
       <view class="button">
         <f-btn type="primary" class="btn mr-8" onTap="openTopUp">Top Up eSIM</f-btn>
-        <f-btn type="primary" class="btn">Package Details</f-btn>
+        <f-btn type="primary" class="btn">{{content.btnPackage}}</f-btn>
       </view>
     </view>
   </block>
@@ -111,16 +111,10 @@
 <view class="footer">
   <view class="top-section">
     <text class="top-text">
-      Tha data packages are
-      <view>
-        available for devices that
-      </view>
-      <view>
-        support eSIM.
-      </view>
+      {{content.text1}}
     </text>
     <f-btn type="secondary" size="small">
-      Compatible Devices
+      {{content.btnViewTrans}}
     </f-btn>
   </view>
 

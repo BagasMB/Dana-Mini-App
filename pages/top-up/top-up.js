@@ -1,3 +1,5 @@
+import translations from '/data/translations'
+
 Page({
   data: {
     plans: [
@@ -16,6 +18,9 @@ Page({
       },
     ],
     activeCountry: null,
+    selectedLanguageIndex: 0,
+    translations,
+    content: {}
   },
 
   onLoad() {
@@ -30,8 +35,22 @@ Page({
       firstCountry = this.data.groupedCountries[0].countries[0].name;
     }
 
+    const savedLanguageIndex = my.getStorageSync({ key: 'languageIndex' }).data;
+    const languageIndex = savedLanguageIndex !== undefined ? savedLanguageIndex : 0
+
     this.setData({
       activeCountry: firstCountry,
+      selectedLanguageIndex: languageIndex
+    });
+
+    // Render konten sesuai bahasa
+    this.updateContent(languageIndex);
+  },
+
+  updateContent(languageIndex) {
+    const selectedLang = languageIndex === 0 ? 'id' : 'en';
+    this.setData({
+      content: this.data.translations[0].topUp[selectedLang],
     });
   },
 

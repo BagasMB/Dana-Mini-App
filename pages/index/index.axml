@@ -3,7 +3,7 @@
 </view>
 <view class="search">
   <f-input
-    placeholder="Where are you traveling to?"
+    placeholder="{{content.placeSearch}}"
     class="no-label"
     onInput="openSearch"
     value="{{search}}"
@@ -24,35 +24,34 @@
     <view class="icon-item">
       <image src="/assets/icons/home.svg" class="icon-svg" />
       <view>
-        <text>Store</text>
+        <text>{{content.menu1}}</text>
       </view>
     </view>
     <view class="icon-item" onTap="openMyESIM">
       <image src="/assets/icons/e-sim-2.svg" class="icon-svg" />
       <view>
-        <text>My eSIM</text>
+        <text>{{content.menu2}}</text>
       </view>
     </view>
     <view class="icon-item" onTap="handleTapIconOutterRight">
       <image src="/assets/icons/comment.svg" class="icon-svg" />
       <view>
-        <text>Support</text>
+        <text>{{content.menu3}}</text>
       </view>
     </view>
     <view class="icon-item" onTap="abouteSIM">
       <image src="/assets/icons/info.svg" class="icon-svg" />
       <view>
-        <text>About eSIM</text>
+        <text>{{content.menu4}}</text>
       </view>
     </view>
   </view>
 </view>
 
 <view>
-  <block a:for="{{groupedCountries}}" a:key="letter">
-    <view class="divider">{{item.letter}}</view>
-
-    <block a:for="{{item.countries}}" a:key="name">
+  <view>
+    <view class="divider">{{content.subtitle1}}</view>
+    <block a:for="{{groupedCountries}}" a:key="name">
       <view
         class="country-row"
         data-country="{{item.name}}"
@@ -65,39 +64,52 @@
         <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
       </view>
     </block>
-  </block>
+  </view>
+  <view>
+    <view class="divider">{{content.subtitle2}}</view>
+    <block a:for="{{global}}" a:key="name">
+      <view
+        class="country-row"
+        data-country="{{item.name}}"
+        data-icon="{{item.icon}}"
+        data-type="{{item.type}}"
+        onTap="onCountries"
+      >
+        <image src="{{item.icon}}" class="country-icon" />
+        <text class="country-name">{{item.name}}</text>
+        <image src="/assets/icons/chev-right.svg" class="arrow-icon" />
+      </view>
+    </block>
+  </view>
 </view>
 
 <view class="button">
-  <btn-gradien onTap="allCountries">View All Countries and Regions</btn-gradien>
+  <btn-gradien onTap="allCountries">{{content.btn1}}</btn-gradien>
 </view>
 
 <view class="help-box">
   <text class="help-box-title">
-    Need Help?
+    {{content.titleHelp}}
   </text>
   <text class="help-box-text">
-    Contact 24/7 Customer Service on WhatsaApp
-    <text class="link">+13322371910</text> or email
+    {{content.isi1}}
+    <text class="link">+13322371910</text> {{content.isi2}}
     <text class="link">support@KnowRoaming.com</text>
   </text>
   <view class="contact-info">
     <image src="/assets/icons/heandset.svg" alt="Customer Service Icon" class="contact-icon" />
     <text class="contact-info-text">
-      24/7 Customer Service
+      {{content.customServis}}
     </text>
   </view>
 </view>
 
 <f-dialog ref="saveRefDialogSetting">
   <f-card class="p-16 mx-16">
-    <text class="text-stay">
-      Setting
-    </text>
+    <text class="text-stay">{{content.popUpTitle}}</text>
     <f-card-content class="mb-16">
       <view style="margin-top: 30rpx;">
-        <text class="mb-4">Language</text>
-        <!--<f-select data="{{select}}" /> -->
+        <text class="mb-4">{{content.label1}}</text>
         <!-- Dropdown Bahasa -->
         <view class="language-select">
           <picker

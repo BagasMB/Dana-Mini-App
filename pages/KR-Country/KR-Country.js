@@ -1,4 +1,5 @@
 import pakets from '/data/pakets'
+import translations from '/data/translations'
 
 Page({
   data: {
@@ -14,6 +15,10 @@ Page({
       { id: 1,  name: 'Pilih 1'},
       { id: 2,  name: 'Pilih 2'},
     ],
+    selectedLanguageIndex: 0, // Default ke bahasa Indonesia
+    translations,
+    // Konten yang ditampilkan
+    content: {}
   },
 
   openHistoryESIM(){
@@ -58,11 +63,27 @@ Page({
   },
 
   onLoad(query) {
-    this.setData({ 
+    const savedLanguageIndex = my.getStorageSync({ key: 'languageIndex' }).data;
+    const languageIndex = savedLanguageIndex !== undefined ? savedLanguageIndex : 0;
+
+    // Atur bahasa default
+    this.setData({
+      selectedLanguageIndex: languageIndex,
       countryName: query.countryName, 
       countryIcon:query.countryIcon,
       countryType:query.countryType,
       pakets: this.data.pakets.map(paket => ({ ...paket, selected: false }))
+    });
+
+    // Render konten sesuai bahasa
+    this.updateContent(languageIndex);
+  },
+
+  // Perbarui konten berdasarkan bahasa
+  updateContent(languageIndex) {
+    const selectedLang = languageIndex === 0 ? 'id' : 'en';
+    this.setData({
+      content: this.data.translations[0].KRcountry[selectedLang],
     });
   },
 

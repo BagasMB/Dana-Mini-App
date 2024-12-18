@@ -1,3 +1,5 @@
+import translations from '/data/translations'
+
 Page({
   data: {
     plans: [
@@ -35,12 +37,35 @@ Page({
         date: "25 Feb 2022",
       },
     ],
+
+    selectedLanguageIndex: 0,
+    translations,
+    content: {}
   },
+
+  onLoad() {
+    const savedLanguageIndex = my.getStorageSync({ key: 'languageIndex' }).data;
+    const languageIndex = savedLanguageIndex !== undefined ? savedLanguageIndex : 0;
+
+    // Atur bahasa default
+    this.setData({ selectedLanguageIndex: languageIndex });
+
+    // Render konten sesuai bahasa
+    this.updateContent(languageIndex);
+  },
+
+  // Perbarui konten berdasarkan bahasa
+  updateContent(languageIndex) {
+    const selectedLang = languageIndex === 0 ? 'id' : 'en';
+    this.setData({
+      content: this.data.translations[0].history[selectedLang],
+    });
+  },
+  
   openActivateeSIM() {
     my.navigateTo({ url: '/pages/activate-eSIM/activate-eSIM'})
   },
   openTopUp() {
     my.navigateTo({ url: '/pages/top-up/top-up'})
   },
-  onLoad() {},
 });

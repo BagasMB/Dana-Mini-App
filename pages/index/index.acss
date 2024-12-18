@@ -122,7 +122,7 @@
   background-color: #f9f9f9;
   border: 2rpx solid #e0e0e0;
   border-radius: 20rpx;
-  padding: 40rpx 10rpx 40rpx 40rpx;
+  padding: 40rpx;
   background-color: #ffffff;
   width: 702rpx;
   box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
@@ -131,7 +131,7 @@
 
 .help-box-title {
   font-size: 36rpx;
-  margin: 0 0 20rpx 0;
+  margin: 0 0 10rpx 0;
   color: #626262;
   font-weight: bold;
 }
@@ -150,19 +150,10 @@
   margin: 0 6rpx;
 }
 
-.help-box a {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.help-box a:hover {
-  text-decoration: underline;
-}
-
 .contact-info {
   display: flex;
   align-items: center;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
 }
 
 .contact-icon {

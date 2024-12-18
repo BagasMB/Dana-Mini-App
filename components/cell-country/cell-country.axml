@@ -8,7 +8,7 @@
       <view class="travel">Travel eSIMs</view>
     </view>
     <f-btn type='secondary' size='small' uppercase="{{true}}" class='provider-select__btn' onTap='onReset'>
-      CHANGE Country
+      {{nameBtn}}
     </f-btn>
   </view>
 </view>

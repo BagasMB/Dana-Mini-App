@@ -1,6 +1,8 @@
+import translations from '/data/translations';
+
 Page({
   data: {
-    tabs: ["Countries", "Regions", "Global"],
+    tabs: [],
     activeTab: 0, // Default tab
     groupedCountries: [
       {
@@ -64,7 +66,15 @@ Page({
         ],
       },
     ],
-    filteredCountries: [], // Untuk menyimpan data sesuai tab
+    filteredCountries: [],
+    selectedLanguageIndex: 0,
+    translations,
+    allcountryContent: {},
+    languages: ['Indonesia', 'English'],
+  },
+  
+  home(){
+    my.navigateTo({ url: '/pages/index/index'});
   },
 
   openSearch() {
@@ -81,16 +91,66 @@ Page({
     });
   },
 
-  onCountries(e) {
-    // Ambil data dari dataset
-    const countryName = e.target.dataset.country;
-    const countryIcon = e.target.dataset.icon;
-    const countryType = e.target.dataset.type;
+  saveRefDialogSetting(ref) {
+    this.dialogSettingRef = ref;
+  },
 
-    if (countryName && countryIcon && countryType) {
-      // Navigasi ke halaman dengan parameter
+  showDialogSetting() {
+    this.dialogSettingRef.show();
+  },
+
+  closeDialogSetting() {
+    this.dialogSettingRef.hide();
+  },
+
+  // Saat halaman pertama kali dimuat
+  onLoad() {
+    const savedLanguageIndex = my.getStorageSync({ key: 'languageIndex' }).data;
+  
+    const languageIndex = savedLanguageIndex !== undefined ? savedLanguageIndex : 0;
+  
+    this.setData({  selectedLanguageIndex: languageIndex });
+  
+    this.updateContent(languageIndex);
+    this.updateTabs(languageIndex);
+    this.filterCountriesByTab();
+  },
+  
+
+  onLanguageChange(e) {
+    const newLanguageIndex = e.detail.value;
+    my.setStorageSync({
+      key: 'languageIndex',
+      data: newLanguageIndex,
+    });
+    this.setData({
+      selectedLanguageIndex: newLanguageIndex,
+    });
+
+    // Perbarui konten sesuai bahasa yang dipilih
+    this.updateContent(newLanguageIndex);
+    this.updateTabs(newLanguageIndex);
+  },
+
+  updateTabs(languageIndex) {
+    const selectedLang = languageIndex === 0 ? 'id' : 'en';
+    const tabs = this.data.translations[0].tabs[selectedLang];
+    this.setData({ tabs });
+  },
+
+  // Perbarui konten berdasarkan bahasa
+  updateContent(languageIndex) {
+    const selectedLang = languageIndex === 0 ? 'id' : 'en';
+    this.setData({
+      allcountryContent: this.data.translations[0].allcountry[selectedLang],
+    });
+  },
+
+  onCountries(e) {
+    const { country, icon, type } = e.target.dataset;
+    if (country && icon && type) {
       my.navigateTo({
-        url: `/pages/KR-Country/KR-Country?countryName=${countryName}&countryIcon=${encodeURIComponent(countryIcon)}&countryType=${countryType}`,
+        url: `/pages/KR-Country/KR-Country?countryName=${country}&countryIcon=${encodeURIComponent(icon)}&countryType=${type}`,
       });
     } else {
       console.error("Data not found in the dataset.");
@@ -135,10 +195,5 @@ Page({
     filteredCountries = filteredCountries.filter((group) => group.countries.length > 0);
 
     this.setData({ filteredCountries });
-  },
-
-  // Saat halaman pertama kali dimuat
-  onLoad() {
-    this.filterCountriesByTab();
   },
 });
